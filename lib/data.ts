@@ -22,6 +22,7 @@ export const navItems = [
 export const projects = [
   {
     title: "Herotrack",
+    emoji: "🚛",
     description:
       "Plataforma completa de rastreamento e gestão logística desenvolvida com Next.js, React, TypeScript, Leaflet e OSRM.",
     highlights: [
@@ -42,6 +43,32 @@ export const projects = [
     ],
     badge: "Projeto Principal",
     featured: true,
+    liveUrl: "https://herotrack.vercel.app",
+    githubUrl: "https://github.com/RaynanOli/herotrack",
+    shortDescription:
+      "Plataforma completa de rastreamento e gestão logística.",
+    gallery: [
+      {
+        label: "Landing Page",
+        src: "/herotrack/landing-page.png",
+        alt: "Landing page do Herotrack com hero e preview do dashboard",
+      },
+      {
+        label: "Dashboard",
+        src: "/herotrack/dashboard.png",
+        alt: "Dashboard operacional do Herotrack com KPIs e centro de comando",
+      },
+      {
+        label: "BI Analytics",
+        src: "/herotrack/bi-analytics.png",
+        alt: "Painel de BI Analytics com indicadores logísticos",
+      },
+      {
+        label: "Dashboard TV",
+        src: "/herotrack/dashboard-tv.png",
+        alt: "Dashboard TV para monitoramento em tempo real",
+      },
+    ],
   },
   {
     title: "Business Intelligence & Power BI",
@@ -56,6 +83,30 @@ export const projects = [
     ],
     technologies: ["Power BI", "SQL", "ETL", "Modelagem de Dados", "Excel"],
     featured: false,
+    disclaimer:
+      "Os dashboards exibidos representam projetos pessoais e estudos de Business Intelligence. Não são utilizados dados confidenciais ou informações corporativas.",
+    gallery: [
+      {
+        label: "Dashboard Executivo",
+        src: "/fotos-bi/BI.jpeg",
+        alt: "Dashboard executivo de Business Intelligence desenvolvido no Power BI",
+      },
+      {
+        label: "Indicadores Operacionais",
+        src: "/fotos-bi/BI2.jpeg",
+        alt: "Painel de indicadores operacionais e KPIs no Power BI",
+      },
+      {
+        label: "Análise de Performance",
+        src: "/fotos-bi/BI3.jpeg",
+        alt: "Análise de performance com visualizações de dados no Power BI",
+      },
+      {
+        label: "Relatório Gerencial",
+        src: "/fotos-bi/BI4.jpeg",
+        alt: "Relatório gerencial com modelagem de dados no Power BI",
+      },
+    ],
   },
   {
     title: "Automação de Processos e SAP",
