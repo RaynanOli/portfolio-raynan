@@ -219,7 +219,10 @@ export function ProjectGallery({
               priority
             />
           </div>
-          <p className="mt-3 px-2 text-center text-xs font-medium text-white sm:mt-4 sm:text-sm">
+          <p
+            className="mt-3 max-w-full truncate whitespace-nowrap px-2 text-center text-xs font-medium text-white sm:mt-4 sm:text-sm"
+            title={active.label}
+          >
             {active.label}
           </p>
         </div>
@@ -262,15 +265,20 @@ export function ProjectGallery({
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             ) : null}
 
-            <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2 sm:inset-x-auto sm:top-auto sm:block">
-              <div className="max-w-[calc(100%-3rem)] rounded-full border border-border bg-surface-elevated px-2.5 py-1 text-[11px] font-medium text-heading backdrop-blur-sm sm:absolute sm:bottom-4 sm:left-4 sm:max-w-[calc(100%-6rem)] sm:px-3 sm:text-xs">
+            <div className="absolute bottom-3 left-3 z-10 max-w-[calc(100%-4.5rem)] sm:bottom-4 sm:left-4 sm:max-w-[calc(100%-6rem)]">
+              <span
+                className="block truncate whitespace-nowrap rounded-full border border-border bg-surface-elevated/95 px-2.5 py-1 text-[11px] font-medium text-heading backdrop-blur-sm sm:px-3 sm:text-xs"
+                title={active.label}
+              >
                 {active.label}
-              </div>
+              </span>
+            </div>
 
-              <div className="shrink-0 rounded-full border border-border bg-surface-elevated px-2 py-1 text-[11px] text-muted backdrop-blur-sm sm:absolute sm:right-4 sm:top-4 sm:px-2.5 sm:text-xs">
+            {items.length > 1 ? (
+              <div className="absolute right-3 top-3 z-10 shrink-0 rounded-full border border-border bg-surface-elevated/95 px-2 py-1 text-[11px] text-muted backdrop-blur-sm sm:right-4 sm:top-4 sm:px-2.5 sm:text-xs">
                 {activeIndex + 1} / {items.length}
               </div>
-            </div>
+            ) : null}
 
             <div className="absolute bottom-4 right-4 hidden rounded-full border border-border bg-surface-elevated px-3 py-1 text-xs text-muted-foreground opacity-0 backdrop-blur-sm transition group-hover:opacity-100 sm:block">
               Clique para ampliar
@@ -301,19 +309,23 @@ export function ProjectGallery({
         </div>
 
         {items.length > 1 ? (
-          <div className={`mt-3 grid gap-2 sm:mt-4 sm:gap-3 ${thumbColumns}`}>
+          <div
+            className={`mt-3 grid min-w-0 gap-2 sm:mt-4 sm:gap-3 ${thumbColumns}`}
+          >
             {items.map((item, index) => (
               <button
                 key={item.src}
                 type="button"
                 onClick={() => setActiveIndex(index)}
-                className={`group/thumb relative overflow-hidden rounded-xl border text-left transition duration-300 ${
+                className={`group/thumb flex min-w-0 flex-col overflow-hidden rounded-xl border text-left transition duration-300 ${
                   index === activeIndex
                     ? styles.activeThumb
                     : "border-border hover:border-border hover:-translate-y-0.5"
                 }`}
               >
-                <div className={`relative ${styles.aspect} overflow-hidden`}>
+                <div
+                  className={`relative min-h-0 w-full shrink-0 ${styles.aspect} overflow-hidden`}
+                >
                   <GalleryImage
                     src={item.src}
                     alt={item.alt}
@@ -329,13 +341,14 @@ export function ProjectGallery({
                     }`}
                   />
                 </div>
-                <div className="border-t border-border-subtle bg-surface-elevated px-2 py-1.5 sm:px-3 sm:py-2">
+                <div className="min-w-0 shrink-0 border-t border-border-subtle bg-surface-elevated px-2 py-2 sm:px-3">
                   <p
-                    className={`truncate text-xs font-medium ${
+                    className={`truncate whitespace-nowrap text-xs font-medium leading-tight ${
                       index === activeIndex
                         ? styles.activeLabel
                         : "text-muted-foreground"
                     }`}
+                    title={item.label}
                   >
                     {item.label}
                   </p>
