@@ -1,0 +1,27 @@
+type SectionHeaderProps = {
+  eyebrow: string;
+  title: string;
+  description?: string;
+};
+
+export function SectionHeader({
+  eyebrow,
+  title,
+  description,
+}: SectionHeaderProps) {
+  return (
+    <div className="mx-auto mb-14 max-w-3xl text-center">
+      <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-cyan-400">
+        {eyebrow}
+      </p>
+      <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        {title}
+      </h2>
+      {description ? (
+        <p className="mt-4 text-base leading-relaxed text-zinc-400 sm:text-lg">
+          {description}
+        </p>
+      ) : null}
+    </div>
+  );
+}
