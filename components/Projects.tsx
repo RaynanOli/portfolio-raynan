@@ -23,7 +23,7 @@ function TechnologyTags({ items }: { items: readonly string[] }) {
 
 function SecondaryProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface p-6 backdrop-blur-sm transition hover:border-border hover:bg-surface-hover sm:p-8">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface p-5 backdrop-blur-sm transition hover:border-border hover:bg-surface-hover sm:p-6 lg:p-8">
       <h3 className="text-xl font-semibold tracking-tight text-heading sm:text-2xl">
         {project.title}
       </h3>
@@ -62,7 +62,7 @@ export function Projects() {
   );
 
   return (
-    <AnimatedSection id="projetos" className="px-6 py-24 lg:py-32">
+    <AnimatedSection id="projetos" className="px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Projetos"

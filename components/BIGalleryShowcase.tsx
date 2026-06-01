@@ -7,7 +7,7 @@ export function BIGalleryShowcase() {
   if (!("gallery" in biProject) || !biProject.gallery) return null;
 
   return (
-    <article className="showcase-bi relative overflow-hidden rounded-[2rem] border border-violet-border bg-card p-6 backdrop-blur-sm sm:p-8 lg:p-12">
+    <article className="showcase-bi relative overflow-hidden rounded-2xl border border-violet-border bg-card p-4 backdrop-blur-sm sm:rounded-[2rem] sm:p-6 lg:p-12">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(139,92,246,0.12),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(59,130,246,0.08),transparent_50%)] dark:opacity-100 opacity-60" />
       <div className="pointer-events-none absolute -right-20 top-0 h-64 w-64 rounded-full bg-violet-soft blur-3xl" />
 
@@ -17,7 +17,7 @@ export function BIGalleryShowcase() {
             Business Intelligence
           </div>
 
-          <h3 className="text-2xl font-semibold tracking-tight text-heading sm:text-3xl lg:text-4xl">
+          <h3 className="text-xl font-semibold tracking-tight text-heading sm:text-3xl lg:text-4xl">
             {biProject.title}
           </h3>
 

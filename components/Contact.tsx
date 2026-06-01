@@ -12,7 +12,7 @@ const iconMap = {
 
 export function Contact() {
   return (
-    <AnimatedSection id="contato" className="px-6 py-24 lg:py-32">
+    <AnimatedSection id="contato" className="px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Contato"
@@ -32,7 +32,7 @@ export function Contact() {
                 rel={
                   link.label === "Email" ? undefined : "noopener noreferrer"
                 }
-                className="group rounded-2xl border border-border bg-surface p-6 backdrop-blur-sm transition hover:-translate-y-1 hover:border-accent-border hover:bg-surface-hover"
+                className="group rounded-2xl border border-border bg-surface p-5 backdrop-blur-sm transition hover:-translate-y-1 hover:border-accent-border hover:bg-surface-hover sm:p-6"
               >
                 <div className="mb-4 inline-flex rounded-xl border border-border bg-surface-elevated p-3 text-muted-foreground transition group-hover:border-accent-border group-hover:text-accent-text">
                   <Icon className="h-5 w-5" />
@@ -40,7 +40,7 @@ export function Contact() {
                 <h3 className="text-lg font-semibold text-heading">
                   {link.label}
                 </h3>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <p className="mt-2 break-words text-sm text-muted-foreground">
                   {link.description}
                 </p>
               </a>
@@ -48,8 +48,11 @@ export function Contact() {
           })}
         </div>
 
-        <div className="mt-10 flex justify-center">
-          <ResumeDownload variant="secondary" />
+        <div className="mt-8 flex justify-center sm:mt-10">
+          <ResumeDownload
+            variant="secondary"
+            className="w-full max-w-sm sm:w-auto"
+          />
         </div>
       </div>
     </AnimatedSection>

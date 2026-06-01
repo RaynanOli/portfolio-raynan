@@ -33,7 +33,7 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-6 py-4 lg:px-8">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:gap-3 sm:px-6 sm:py-4 lg:px-8">
         <a
           href="#home"
           className="group flex shrink-0 items-center gap-2 text-sm font-semibold tracking-tight text-heading"
@@ -67,8 +67,8 @@ export function Navbar() {
           </a>
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle className="px-3 py-2 text-xs" />
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2 md:hidden">
+          <ThemeToggle compact className="px-2.5 py-2 text-xs sm:px-3" />
           <button
             type="button"
             className="inline-flex rounded-lg p-2 text-muted-foreground transition hover:bg-surface-hover hover:text-heading"
@@ -87,7 +87,7 @@ export function Navbar() {
 
       {open ? (
         <div className="border-t border-border bg-nav backdrop-blur-xl md:hidden">
-          <ul className="flex flex-col gap-1 px-6 py-4">
+          <ul className="flex flex-col gap-1 px-4 py-4 sm:px-6">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a

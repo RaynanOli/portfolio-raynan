@@ -11,7 +11,7 @@ const categoryColors = [
 
 export function Technologies() {
   return (
-    <AnimatedSection id="tecnologias" className="px-6 py-24 lg:py-32">
+    <AnimatedSection id="tecnologias" className="px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Tecnologias"
@@ -23,7 +23,7 @@ export function Technologies() {
           {techCategories.map((category, index) => (
             <div
               key={category.title}
-              className={`rounded-2xl border bg-gradient-to-br p-6 backdrop-blur-sm ${categoryColors[index]}`}
+              className={`rounded-2xl border bg-gradient-to-br p-5 backdrop-blur-sm sm:p-6 ${categoryColors[index]}`}
             >
               <h3 className="mb-5 text-lg font-semibold text-heading">
                 {category.title}

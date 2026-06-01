@@ -8,7 +8,7 @@ export function HerotrackShowcase() {
   const project = herotrack;
 
   return (
-    <article className="showcase-hero relative overflow-hidden rounded-[2rem] border border-accent-border bg-card p-6 backdrop-blur-sm sm:p-8 lg:p-12">
+    <article className="showcase-hero relative overflow-hidden rounded-2xl border border-accent-border bg-card p-4 backdrop-blur-sm sm:rounded-[2rem] sm:p-6 lg:p-12">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(34,211,238,0.12),transparent_50%),radial-gradient(ellipse_at_bottom_left,rgba(139,92,246,0.12),transparent_50%)] dark:opacity-100 opacity-60" />
       <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent-soft blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-violet-soft blur-3xl" />
@@ -20,7 +20,7 @@ export function HerotrackShowcase() {
               {project.badge}
             </div>
 
-            <h3 className="text-3xl font-semibold tracking-tight text-heading sm:text-4xl lg:text-5xl">
+            <h3 className="text-2xl font-semibold tracking-tight text-heading sm:text-4xl lg:text-5xl">
               <span className="mr-3" aria-hidden="true">
                 {project.emoji}
               </span>
@@ -36,12 +36,12 @@ export function HerotrackShowcase() {
             </p>
           </div>
 
-          <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+          <div className="flex w-full shrink-0 flex-col gap-3 sm:w-auto sm:flex-row lg:flex-col xl:flex-row">
             <a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 px-6 py-3 text-sm font-semibold text-brand-fg transition hover:opacity-90"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 px-6 py-3 text-sm font-semibold text-brand-fg transition hover:opacity-90 sm:w-auto"
             >
               Ver Projeto
               <ExternalLinkIcon className="h-4 w-4" />
@@ -50,7 +50,7 @@ export function HerotrackShowcase() {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-btn-secondary-border bg-btn-secondary-bg px-6 py-3 text-sm font-medium text-btn-secondary-fg backdrop-blur-sm transition hover:bg-surface-hover"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-btn-secondary-border bg-btn-secondary-bg px-6 py-3 text-sm font-medium text-btn-secondary-fg backdrop-blur-sm transition hover:bg-surface-hover sm:w-auto"
             >
               <GithubIcon className="h-4 w-4" />
               GitHub

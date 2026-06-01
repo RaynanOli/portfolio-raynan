@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 export function About() {
   return (
-    <AnimatedSection id="sobre" className="px-6 py-24 lg:py-32">
+    <AnimatedSection id="sobre" className="px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Sobre Mim"
@@ -13,7 +13,7 @@ export function About() {
         />
 
         <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border border-border bg-surface p-8 backdrop-blur-sm">
+          <div className="rounded-2xl border border-border bg-surface p-6 backdrop-blur-sm sm:p-8">
             <h3 className="mb-4 text-lg font-semibold text-heading">Quem sou</h3>
             <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
               {site.about.map((paragraph) => (
@@ -22,7 +22,7 @@ export function About() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-cyan-500/10 via-transparent to-violet-500/10 p-8">
+          <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-cyan-500/10 via-transparent to-violet-500/10 p-6 sm:p-8">
             <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-accent-soft blur-2xl" />
             <h3 className="mb-4 text-lg font-semibold text-heading">
               Objetivo de carreira

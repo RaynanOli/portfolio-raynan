@@ -13,7 +13,7 @@ const areaStyles = [
 
 export function ExpertiseAreas() {
   return (
-    <AnimatedSection className="px-6 pb-24 lg:pb-32">
+    <AnimatedSection className="px-4 pb-20 sm:px-6 sm:pb-24 lg:pb-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Expertise"
@@ -25,7 +25,7 @@ export function ExpertiseAreas() {
           {expertiseAreas.map((area, index) => (
             <article
               key={area.title}
-              className={`group relative overflow-hidden rounded-2xl border bg-gradient-to-br p-6 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-lg ${areaStyles[index]}`}
+              className={`group relative overflow-hidden rounded-2xl border bg-gradient-to-br p-5 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-lg sm:p-6 ${areaStyles[index]}`}
             >
               <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-surface-elevated text-lg font-bold text-heading">
                 {String(index + 1).padStart(2, "0")}

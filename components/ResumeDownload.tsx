@@ -21,7 +21,7 @@ export function ResumeDownload({
       target="_blank"
       rel="noopener noreferrer"
       download={resume.fileName}
-      className={`inline-flex min-w-[180px] items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition ${styles} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition sm:min-w-[180px] ${styles} ${className}`}
     >
       <DownloadIcon className="h-4 w-4" />
       {resume.label}

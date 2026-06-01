@@ -10,11 +10,11 @@ export function SectionHeader({
   description,
 }: SectionHeaderProps) {
   return (
-    <div className="mx-auto mb-14 max-w-3xl text-center">
-      <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-accent-text">
+    <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
+      <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-accent-text sm:text-sm">
         {eyebrow}
       </p>
-      <h2 className="text-3xl font-semibold tracking-tight text-heading sm:text-4xl">
+      <h2 className="text-balance text-2xl font-semibold tracking-tight text-heading sm:text-4xl">
         {title}
       </h2>
       {description ? (
