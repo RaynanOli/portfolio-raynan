@@ -42,7 +42,7 @@ export function AthosDigitalShowcase() {
         ) : null}
 
         {certificateItem ? (
-          <div className="overflow-hidden rounded-2xl border border-amber-400/25 bg-gradient-to-br from-amber-500/10 via-transparent to-blue-500/5 p-4 sm:p-6">
+          <div className="certificate-showcase overflow-hidden rounded-2xl p-4 sm:p-6">
             <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-xs font-medium uppercase tracking-[0.15em] text-amber-700 dark:text-amber-300">
@@ -59,7 +59,13 @@ export function AthosDigitalShowcase() {
               </span>
             </div>
 
-            <ProjectGallery items={[certificateItem]} variant="bi" />
+            <div className="certificate-gallery">
+              <ProjectGallery
+                items={[certificateItem]}
+                variant="bi"
+                imageGradient={false}
+              />
+            </div>
           </div>
         ) : null}
 
