@@ -9,6 +9,11 @@ type AnimatedSectionProps = {
   id?: string;
 };
 
+function isNearViewport(element: HTMLElement) {
+  const rect = element.getBoundingClientRect();
+  return rect.top < window.innerHeight + 120;
+}
+
 export function AnimatedSection({
   children,
   className = "",
@@ -16,20 +21,27 @@ export function AnimatedSection({
   id,
 }: AnimatedSectionProps) {
   const ref = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
 
+    const reveal = () => setRevealed(true);
+
+    if (isNearViewport(element)) {
+      reveal();
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisible(true);
+          reveal();
           observer.unobserve(element);
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      { threshold: 0.05, rootMargin: "0px 0px 5% 0px" },
     );
 
     observer.observe(element);
@@ -40,10 +52,10 @@ export function AnimatedSection({
     <section
       id={id}
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
-        visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+      className={`transition-[transform,opacity] duration-700 ease-out ${
+        revealed ? "translate-y-0 opacity-100" : "translate-y-4 opacity-100"
       } ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ transitionDelay: revealed ? "0ms" : `${delay}ms` }}
     >
       {children}
     </section>

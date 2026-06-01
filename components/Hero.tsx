@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-20 pb-14 sm:px-6 sm:pt-24 sm:pb-16"
+      className="relative flex flex-col items-center justify-center overflow-hidden px-4 pt-24 pb-12 sm:px-6 sm:pt-28 sm:pb-14 lg:min-h-screen lg:pb-16"
     >
       <div className="pointer-events-none absolute inset-0">
         <div
@@ -57,7 +57,7 @@ export function Hero() {
           />
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-3 text-xs text-muted">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs text-muted sm:mt-12">
           {["Sistemas", "BI", "Automação", "Inteligência Artificial"].map(
             (tag) => (
               <span

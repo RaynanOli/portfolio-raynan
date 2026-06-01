@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 export function About() {
   return (
-    <AnimatedSection id="sobre" className="px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
+    <AnimatedSection id="sobre" className="px-4 py-16 sm:px-6 sm:py-20 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Sobre Mim"

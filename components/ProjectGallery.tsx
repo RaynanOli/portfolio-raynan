@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, type ComponentProps } from "react";
 import { createPortal } from "react-dom";
 import {
   ChevronLeftIcon,
@@ -21,6 +21,66 @@ type ProjectGalleryProps = {
   items: readonly GalleryItem[];
   variant?: GalleryVariant;
 };
+
+type GalleryImageProps = {
+  src: string;
+  alt: string;
+  className?: string;
+  fill?: boolean;
+  sizes?: string;
+  priority?: boolean;
+  width?: number;
+  height?: number;
+};
+
+function GalleryImage({
+  src,
+  alt,
+  className = "",
+  fill,
+  sizes,
+  priority,
+  width,
+  height,
+}: GalleryImageProps) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <div
+        className={`flex items-center justify-center bg-gallery-image-bg p-6 text-center ${
+          fill ? "absolute inset-0" : "min-h-[180px] w-full rounded-xl"
+        } ${className}`}
+      >
+        <div>
+          <p className="text-sm font-medium text-heading">Imagem indisponível</p>
+          <p className="mt-1 text-xs text-muted-foreground">{alt}</p>
+        </div>
+      </div>
+    );
+  }
+
+  const imageProps: ComponentProps<typeof Image> = {
+    src,
+    alt,
+    className,
+    sizes,
+    priority,
+    onError: () => setFailed(true),
+  };
+
+  if (fill) {
+    return <Image {...imageProps} fill />;
+  }
+
+  return (
+    <Image
+      {...imageProps}
+      width={width ?? 1920}
+      height={height ?? 1080}
+    />
+  );
+}
 
 const variantStyles = {
   saas: {
@@ -147,7 +207,7 @@ export function ProjectGallery({
           onClick={(event) => event.stopPropagation()}
         >
           <div className="flex max-h-[70vh] w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-lightbox shadow-2xl sm:max-h-[75vh] sm:rounded-2xl">
-            <Image
+            <GalleryImage
               src={active.src}
               alt={active.alt}
               width={1920}
@@ -185,7 +245,7 @@ export function ProjectGallery({
                     : "scale-[1.02] opacity-0"
                 }`}
               >
-                <Image
+                <GalleryImage
                   src={item.src}
                   alt={item.alt}
                   fill
@@ -250,7 +310,7 @@ export function ProjectGallery({
                 }`}
               >
                 <div className={`relative ${styles.aspect} overflow-hidden`}>
-                  <Image
+                  <GalleryImage
                     src={item.src}
                     alt={item.alt}
                     fill

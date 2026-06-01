@@ -1,5 +1,4 @@
 import { projects } from "@/lib/data";
-import { AnimatedSection } from "@/components/AnimatedSection";
 import { AthosDigitalShowcase } from "@/components/AthosDigitalShowcase";
 import { BIGalleryShowcase } from "@/components/BIGalleryShowcase";
 import { HerotrackShowcase } from "@/components/HerotrackShowcase";
@@ -63,7 +62,7 @@ export function Projects() {
   );
 
   return (
-    <AnimatedSection id="projetos" className="px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
+    <section id="projetos" className="px-4 py-16 sm:px-6 sm:py-20 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Projetos"
@@ -83,6 +82,6 @@ export function Projects() {
           </div>
         </div>
       </div>
-    </AnimatedSection>
+    </section>
   );
 }
