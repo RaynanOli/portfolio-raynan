@@ -1,5 +1,6 @@
 import { projects } from "@/lib/data";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { AthosDigitalShowcase } from "@/components/AthosDigitalShowcase";
 import { BIGalleryShowcase } from "@/components/BIGalleryShowcase";
 import { HerotrackShowcase } from "@/components/HerotrackShowcase";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -73,6 +74,7 @@ export function Projects() {
         <div className="space-y-6">
           <HerotrackShowcase />
           <BIGalleryShowcase />
+          <AthosDigitalShowcase />
 
           <div className="grid gap-6">
             {cardProjects.map((project) => (

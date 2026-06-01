@@ -109,6 +109,45 @@ export const projects = [
     ],
   },
   {
+    title: "Projeto Athos Digital",
+    description:
+      "Participação no aprimoramento de uma plataforma de Business Intelligence voltada à expansão de dashboards, personalização de KPIs e evolução da estrutura de dados para atendimento de diferentes segmentos de negócio.",
+    highlights: [
+      "Desenvolvimento de Dashboards",
+      "Business Intelligence",
+      "Estruturação de Dados",
+      "KPIs Estratégicos",
+      "Integração de Dados",
+      "Análise de Indicadores",
+    ],
+    technologies: [
+      "Power BI",
+      "Excel",
+      "SQL",
+      "Business Intelligence",
+      "Data Analysis",
+    ],
+    featured: false,
+    badge: "Projeto Corporativo",
+    gallery: [
+      {
+        label: "Dashboard BI",
+        src: "/projeto-AthosDigital/BI.jpeg",
+        alt: "Dashboard de Business Intelligence desenvolvido no projeto Athos Digital",
+      },
+      {
+        label: "Painel de Indicadores",
+        src: "/projeto-AthosDigital/BI2.jpeg",
+        alt: "Painel de indicadores e KPIs estratégicos do projeto Athos Digital",
+      },
+      {
+        label: "Certificado de Participação",
+        src: "/projeto-AthosDigital/Certificado.jpeg",
+        alt: "Certificado de participação no projeto Athos Digital",
+      },
+    ],
+  },
+  {
     title: "Automação de Processos e SAP",
     description:
       "Desenvolvimento de automações para redução de atividades manuais, integração de informações e otimização de fluxos operacionais.",
