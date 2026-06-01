@@ -14,23 +14,25 @@ export function Experience() {
 
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
-            <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+            <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-muted">
               Experiência Profissional
             </h3>
             <div className="space-y-6">
               {experience.work.map((item) => (
                 <article
                   key={item.company}
-                  className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm"
+                  className="relative rounded-2xl border border-border bg-surface p-6 backdrop-blur-sm"
                 >
                   <div className="mb-4 flex items-start justify-between gap-4">
                     <div>
-                      <h4 className="text-xl font-semibold text-white">
+                      <h4 className="text-xl font-semibold text-heading">
                         {item.company}
                       </h4>
-                      <p className="mt-1 text-sm text-zinc-400">{item.role}</p>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        {item.role}
+                      </p>
                     </div>
-                    <span className="shrink-0 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">
+                    <span className="shrink-0 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-600 dark:text-emerald-300">
                       {item.period}
                     </span>
                   </div>
@@ -38,9 +40,9 @@ export function Experience() {
                     {item.highlights.map((highlight) => (
                       <li
                         key={highlight}
-                        className="flex items-start gap-3 text-sm text-zinc-400"
+                        className="flex items-start gap-3 text-sm text-muted-foreground"
                       >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                         {highlight}
                       </li>
                     ))}
@@ -51,7 +53,7 @@ export function Experience() {
           </div>
 
           <div>
-            <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+            <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-muted">
               Formação Acadêmica
             </h3>
             <div className="relative space-y-0">
@@ -61,14 +63,14 @@ export function Experience() {
                   className="relative flex gap-4 pb-8 last:pb-0"
                 >
                   {index < experience.education.length - 1 ? (
-                    <span className="absolute left-[11px] top-8 h-[calc(100%-1rem)] w-px bg-white/10" />
+                    <span className="absolute left-[11px] top-8 h-[calc(100%-1rem)] w-px bg-border" />
                   ) : null}
-                  <span className="relative z-10 mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-violet-400/30 bg-violet-500/10">
-                    <span className="h-2 w-2 rounded-full bg-violet-400" />
+                  <span className="relative z-10 mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-violet-border bg-violet-soft">
+                    <span className="h-2 w-2 rounded-full bg-violet-500" />
                   </span>
-                  <div className="min-w-0 flex-1 rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm">
-                    <h4 className="font-semibold text-white">{item.title}</h4>
-                    <p className="mt-1 text-sm text-zinc-400">
+                  <div className="min-w-0 flex-1 rounded-2xl border border-border bg-surface p-5 backdrop-blur-sm">
+                    <h4 className="font-semibold text-heading">{item.title}</h4>
+                    <p className="mt-1 text-sm text-muted-foreground">
                       {item.institution}
                     </p>
                   </div>

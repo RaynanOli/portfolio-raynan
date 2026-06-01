@@ -12,8 +12,8 @@ export function ResumeDownload({
 }: ResumeDownloadProps) {
   const styles =
     variant === "primary"
-      ? "border border-white/15 bg-white/5 text-white backdrop-blur-sm hover:bg-white/10"
-      : "border border-cyan-400/20 bg-cyan-400/10 text-cyan-300 hover:border-cyan-400/40 hover:bg-cyan-400/15";
+      ? "border border-btn-secondary-border bg-btn-secondary-bg text-btn-secondary-fg backdrop-blur-sm hover:bg-surface-hover"
+      : "border border-accent-border bg-accent-soft text-accent-text hover:border-accent/40 hover:bg-accent-soft";
 
   return (
     <a

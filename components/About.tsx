@@ -13,21 +13,21 @@ export function About() {
         />
 
         <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-sm">
-            <h3 className="mb-4 text-lg font-semibold text-white">Quem sou</h3>
-            <div className="space-y-4 text-base leading-relaxed text-zinc-400">
+          <div className="rounded-2xl border border-border bg-surface p-8 backdrop-blur-sm">
+            <h3 className="mb-4 text-lg font-semibold text-heading">Quem sou</h3>
+            <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
               {site.about.map((paragraph) => (
                 <p key={paragraph.slice(0, 32)}>{paragraph}</p>
               ))}
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-500/10 via-transparent to-violet-500/10 p-8">
-            <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-cyan-400/10 blur-2xl" />
-            <h3 className="mb-4 text-lg font-semibold text-white">
+          <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-cyan-500/10 via-transparent to-violet-500/10 p-8">
+            <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-accent-soft blur-2xl" />
+            <h3 className="mb-4 text-lg font-semibold text-heading">
               Objetivo de carreira
             </h3>
-            <p className="text-base leading-relaxed text-zinc-300">
+            <p className="text-base leading-relaxed text-foreground">
               {site.careerGoal}
             </p>
 
@@ -40,12 +40,12 @@ export function About() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="rounded-xl border border-white/10 bg-[#030712]/40 p-4"
+                  className="rounded-xl border border-border bg-surface-elevated p-4"
                 >
-                  <p className="text-xl font-semibold text-cyan-400">
+                  <p className="text-xl font-semibold text-accent-text">
                     {item.value}
                   </p>
-                  <p className="mt-1 text-sm text-zinc-500">{item.label}</p>
+                  <p className="mt-1 text-sm text-muted">{item.label}</p>
                 </div>
               ))}
             </div>

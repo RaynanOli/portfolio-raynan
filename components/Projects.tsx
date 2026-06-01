@@ -12,7 +12,7 @@ function TechnologyTags({ items }: { items: readonly string[] }) {
       {items.map((tech) => (
         <span
           key={tech}
-          className="rounded-full border border-white/10 bg-[#030712]/60 px-3 py-1 text-xs text-zinc-300 sm:text-sm"
+          className="rounded-full border border-border bg-surface-elevated px-3 py-1 text-xs text-muted-foreground sm:text-sm"
         >
           {tech}
         </span>
@@ -23,33 +23,33 @@ function TechnologyTags({ items }: { items: readonly string[] }) {
 
 function SecondaryProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition hover:border-white/20 hover:bg-white/[0.05] sm:p-8">
-      <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface p-6 backdrop-blur-sm transition hover:border-border hover:bg-surface-hover sm:p-8">
+      <h3 className="text-xl font-semibold tracking-tight text-heading sm:text-2xl">
         {project.title}
       </h3>
 
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400 sm:text-base">
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
         {project.description}
       </p>
 
       <div className="mt-6">
-        <p className="mb-3 text-xs font-medium uppercase tracking-[0.15em] text-zinc-500">
+        <p className="mb-3 text-xs font-medium uppercase tracking-[0.15em] text-muted">
           Destaques
         </p>
         <ul className="space-y-2">
           {project.highlights.map((item) => (
             <li
               key={item}
-              className="flex items-start gap-2 text-sm text-zinc-400"
+              className="flex items-start gap-2 text-sm text-muted-foreground"
             >
-              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-violet-400" />
+              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-violet-500" />
               {item}
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="mt-6 border-t border-white/5 pt-6">
+      <div className="mt-6 border-t border-border-subtle pt-6">
         <TechnologyTags items={project.technologies} />
       </div>
     </article>

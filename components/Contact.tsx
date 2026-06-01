@@ -32,15 +32,17 @@ export function Contact() {
                 rel={
                   link.label === "Email" ? undefined : "noopener noreferrer"
                 }
-                className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.05]"
+                className="group rounded-2xl border border-border bg-surface p-6 backdrop-blur-sm transition hover:-translate-y-1 hover:border-accent-border hover:bg-surface-hover"
               >
-                <div className="mb-4 inline-flex rounded-xl border border-white/10 bg-[#030712]/60 p-3 text-zinc-300 transition group-hover:border-cyan-400/20 group-hover:text-cyan-300">
+                <div className="mb-4 inline-flex rounded-xl border border-border bg-surface-elevated p-3 text-muted-foreground transition group-hover:border-accent-border group-hover:text-accent-text">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="text-lg font-semibold text-heading">
                   {link.label}
                 </h3>
-                <p className="mt-2 text-sm text-zinc-400">{link.description}</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {link.description}
+                </p>
               </a>
             );
           })}

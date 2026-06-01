@@ -3,10 +3,10 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { SectionHeader } from "@/components/SectionHeader";
 
 const categoryColors = [
-  "from-cyan-500/20 to-cyan-500/5 border-cyan-400/20",
-  "from-violet-500/20 to-violet-500/5 border-violet-400/20",
-  "from-blue-500/20 to-blue-500/5 border-blue-400/20",
-  "from-emerald-500/20 to-emerald-500/5 border-emerald-400/20",
+  "from-cyan-500/15 to-cyan-500/5 border-accent-border",
+  "from-violet-500/15 to-violet-500/5 border-violet-border",
+  "from-blue-500/15 to-blue-500/5 border-blue-400/20",
+  "from-emerald-500/15 to-emerald-500/5 border-emerald-400/20",
 ];
 
 export function Technologies() {
@@ -25,14 +25,14 @@ export function Technologies() {
               key={category.title}
               className={`rounded-2xl border bg-gradient-to-br p-6 backdrop-blur-sm ${categoryColors[index]}`}
             >
-              <h3 className="mb-5 text-lg font-semibold text-white">
+              <h3 className="mb-5 text-lg font-semibold text-heading">
                 {category.title}
               </h3>
               <ul className="flex flex-wrap gap-2">
                 {category.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-full border border-white/10 bg-[#030712]/50 px-3 py-1.5 text-sm text-zinc-300 transition hover:border-white/20 hover:text-white"
+                    className="rounded-full border border-border bg-surface-elevated px-3 py-1.5 text-sm text-muted-foreground transition hover:border-border hover:text-heading"
                   >
                     {item}
                   </li>

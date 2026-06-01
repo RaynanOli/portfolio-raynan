@@ -23,25 +23,22 @@ type ProjectGalleryProps = {
 
 const variantStyles = {
   saas: {
-    frame:
-      "shadow-[0_0_0_1px_rgba(34,211,238,0.08),0_30px_80px_-30px_rgba(34,211,238,0.25)]",
-    activeThumb:
-      "border-cyan-400/50 shadow-[0_0_24px_-8px_rgba(34,211,238,0.5)]",
-    activeLabel: "text-cyan-300",
-    activeOverlay: "bg-cyan-400/10",
-    navHover: "hover:border-cyan-400/30",
+    frame: "gallery-frame-saas",
+    activeThumb: "border-accent-border shadow-[0_0_24px_-8px_rgba(34,211,238,0.35)]",
+    activeLabel: "text-accent-text",
+    activeOverlay: "bg-accent-soft",
+    navHover: "hover:border-accent-border",
     imageFit: "object-cover object-top",
     aspect: "aspect-[16/10]",
   },
   bi: {
-    frame:
-      "shadow-[0_0_0_1px_rgba(139,92,246,0.08),0_30px_80px_-30px_rgba(139,92,246,0.2)]",
+    frame: "gallery-frame-bi",
     activeThumb:
-      "border-violet-400/50 shadow-[0_0_24px_-8px_rgba(139,92,246,0.45)]",
-    activeLabel: "text-violet-300",
-    activeOverlay: "bg-violet-400/10",
-    navHover: "hover:border-violet-400/30",
-    imageFit: "object-contain object-center bg-[#0a0f1a]",
+      "border-violet-border shadow-[0_0_24px_-8px_rgba(139,92,246,0.3)]",
+    activeLabel: "text-violet-text",
+    activeOverlay: "bg-violet-soft",
+    navHover: "hover:border-violet-border",
+    imageFit: "object-contain object-center bg-gallery-image-bg",
     aspect: "aspect-[16/10] sm:aspect-[16/9]",
   },
 } as const;
@@ -96,7 +93,7 @@ export function ProjectGallery({
     <>
       <div className="relative">
         <div
-          className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-[#030712]/80 ${styles.frame}`}
+          className={`group relative overflow-hidden rounded-2xl border border-border bg-gallery-bg ${styles.frame}`}
         >
           <button
             type="button"
@@ -124,17 +121,17 @@ export function ProjectGallery({
               </div>
             ))}
 
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#030712]/80 via-transparent to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
 
-            <div className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-[#030712]/70 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+            <div className="absolute bottom-4 left-4 rounded-full border border-border bg-surface-elevated px-3 py-1 text-xs font-medium text-heading backdrop-blur-sm">
               {active.label}
             </div>
 
-            <div className="absolute bottom-4 right-4 rounded-full border border-white/10 bg-[#030712]/70 px-3 py-1 text-xs text-zinc-400 opacity-0 backdrop-blur-sm transition group-hover:opacity-100">
+            <div className="absolute bottom-4 right-4 rounded-full border border-border bg-surface-elevated px-3 py-1 text-xs text-muted-foreground opacity-0 backdrop-blur-sm transition group-hover:opacity-100">
               Clique para ampliar
             </div>
 
-            <div className="absolute right-4 top-4 rounded-full border border-white/10 bg-[#030712]/70 px-2.5 py-1 text-xs text-zinc-500 backdrop-blur-sm">
+            <div className="absolute right-4 top-4 rounded-full border border-border bg-surface-elevated px-2.5 py-1 text-xs text-muted backdrop-blur-sm">
               {activeIndex + 1} / {items.length}
             </div>
           </button>
@@ -144,7 +141,7 @@ export function ProjectGallery({
               <button
                 type="button"
                 onClick={goPrev}
-                className={`absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/10 bg-[#030712]/70 p-2 text-zinc-300 backdrop-blur-sm transition ${styles.navHover} hover:text-white`}
+                className={`absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full border border-border bg-surface-elevated p-2 text-muted-foreground backdrop-blur-sm transition ${styles.navHover} hover:text-heading`}
                 aria-label="Imagem anterior"
               >
                 <ChevronLeftIcon className="h-5 w-5" />
@@ -153,7 +150,7 @@ export function ProjectGallery({
               <button
                 type="button"
                 onClick={goNext}
-                className={`absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/10 bg-[#030712]/70 p-2 text-zinc-300 backdrop-blur-sm transition ${styles.navHover} hover:text-white`}
+                className={`absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full border border-border bg-surface-elevated p-2 text-muted-foreground backdrop-blur-sm transition ${styles.navHover} hover:text-heading`}
                 aria-label="Próxima imagem"
               >
                 <ChevronRightIcon className="h-5 w-5" />
@@ -172,7 +169,7 @@ export function ProjectGallery({
                 className={`group/thumb relative overflow-hidden rounded-xl border text-left transition duration-300 ${
                   index === activeIndex
                     ? styles.activeThumb
-                    : "border-white/10 hover:border-white/25 hover:-translate-y-0.5"
+                    : "border-border hover:border-border hover:-translate-y-0.5"
                 }`}
               >
                 <div className={`relative ${styles.aspect} overflow-hidden`}>
@@ -187,16 +184,16 @@ export function ProjectGallery({
                     className={`absolute inset-0 transition ${
                       index === activeIndex
                         ? styles.activeOverlay
-                        : "bg-[#030712]/20 group-hover/thumb:bg-transparent"
+                        : "bg-background/20 group-hover/thumb:bg-transparent"
                     }`}
                   />
                 </div>
-                <div className="border-t border-white/5 bg-[#030712]/60 px-3 py-2">
+                <div className="border-t border-border-subtle bg-surface-elevated px-3 py-2">
                   <p
                     className={`truncate text-xs font-medium ${
                       index === activeIndex
                         ? styles.activeLabel
-                        : "text-zinc-400"
+                        : "text-muted-foreground"
                     }`}
                   >
                     {item.label}
@@ -210,7 +207,7 @@ export function ProjectGallery({
 
       {lightboxOpen ? (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#030712]/95 p-4 backdrop-blur-xl sm:p-8"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-overlay p-4 backdrop-blur-xl sm:p-8"
           role="dialog"
           aria-modal="true"
           aria-label={`Visualização ampliada: ${active.label}`}
@@ -219,7 +216,7 @@ export function ProjectGallery({
           <button
             type="button"
             onClick={() => setLightboxOpen(false)}
-            className="absolute right-4 top-4 z-10 rounded-full border border-white/10 bg-white/5 p-2 text-zinc-300 transition hover:text-white sm:right-8 sm:top-8"
+            className="absolute right-4 top-4 z-10 rounded-full border border-border bg-surface p-2 text-muted-foreground transition hover:text-heading sm:right-8 sm:top-8"
             aria-label="Fechar visualização ampliada"
           >
             <CloseIcon className="h-6 w-6" />
@@ -233,7 +230,7 @@ export function ProjectGallery({
                   event.stopPropagation();
                   goPrev();
                 }}
-                className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/10 bg-white/5 p-3 text-zinc-300 transition hover:text-white sm:left-6"
+                className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full border border-border bg-surface p-3 text-muted-foreground transition hover:text-heading sm:left-6"
                 aria-label="Imagem anterior"
               >
                 <ChevronLeftIcon className="h-6 w-6" />
@@ -245,7 +242,7 @@ export function ProjectGallery({
                   event.stopPropagation();
                   goNext();
                 }}
-                className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/10 bg-white/5 p-3 text-zinc-300 transition hover:text-white sm:right-6"
+                className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full border border-border bg-surface p-3 text-muted-foreground transition hover:text-heading sm:right-6"
                 aria-label="Próxima imagem"
               >
                 <ChevronRightIcon className="h-6 w-6" />
@@ -257,7 +254,7 @@ export function ProjectGallery({
             className="relative max-h-[85vh] w-full max-w-6xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="relative max-h-[75vh] min-h-[240px] overflow-hidden rounded-2xl border border-white/10 bg-[#030712] shadow-2xl">
+            <div className="relative max-h-[75vh] min-h-[240px] overflow-hidden rounded-2xl border border-border bg-lightbox shadow-2xl">
               <Image
                 src={active.src}
                 alt={active.alt}
@@ -268,7 +265,7 @@ export function ProjectGallery({
                 priority
               />
             </div>
-            <p className="mt-4 text-center text-sm font-medium text-zinc-300">
+            <p className="mt-4 text-center text-sm font-medium text-foreground">
               {active.label}
             </p>
           </div>
