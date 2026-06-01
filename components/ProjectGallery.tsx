@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -49,9 +50,14 @@ export function ProjectGallery({
 }: ProjectGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const styles = variantStyles[variant];
 
   const active = items[activeIndex];
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const goTo = useCallback(
     (index: number) => {
@@ -88,6 +94,75 @@ export function ProjectGallery({
       : items.length === 3
         ? "grid-cols-3"
         : "grid-cols-2 sm:grid-cols-4";
+
+  const lightbox =
+    lightboxOpen && active ? (
+      <div
+        className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 p-4 backdrop-blur-md sm:p-8"
+        style={{ position: "fixed", inset: 0 }}
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Visualização ampliada: ${active.label}`}
+        onClick={() => setLightboxOpen(false)}
+      >
+        <button
+          type="button"
+          onClick={() => setLightboxOpen(false)}
+          className="absolute right-4 top-4 z-[10000] rounded-full border border-border bg-surface p-2 text-muted-foreground transition hover:text-heading sm:right-8 sm:top-8"
+          aria-label="Fechar visualização ampliada"
+        >
+          <CloseIcon className="h-6 w-6" />
+        </button>
+
+        {items.length > 1 ? (
+          <>
+            <button
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                goPrev();
+              }}
+              className="absolute left-2 top-1/2 z-[10000] -translate-y-1/2 rounded-full border border-border bg-surface p-3 text-muted-foreground transition hover:text-heading sm:left-6"
+              aria-label="Imagem anterior"
+            >
+              <ChevronLeftIcon className="h-6 w-6" />
+            </button>
+
+            <button
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                goNext();
+              }}
+              className="absolute right-2 top-1/2 z-[10000] -translate-y-1/2 rounded-full border border-border bg-surface p-3 text-muted-foreground transition hover:text-heading sm:right-6"
+              aria-label="Próxima imagem"
+            >
+              <ChevronRightIcon className="h-6 w-6" />
+            </button>
+          </>
+        ) : null}
+
+        <div
+          className="flex w-full max-w-6xl flex-col items-center justify-center"
+          onClick={(event) => event.stopPropagation()}
+        >
+          <div className="flex max-h-[75vh] w-full items-center justify-center overflow-hidden rounded-2xl border border-border bg-lightbox shadow-2xl">
+            <Image
+              src={active.src}
+              alt={active.alt}
+              width={1920}
+              height={1080}
+              className="max-h-[75vh] w-auto max-w-full object-contain"
+              sizes="100vw"
+              priority
+            />
+          </div>
+          <p className="mt-4 text-center text-sm font-medium text-white">
+            {active.label}
+          </p>
+        </div>
+      </div>
+    ) : null;
 
   return (
     <>
@@ -205,72 +280,7 @@ export function ProjectGallery({
         ) : null}
       </div>
 
-      {lightboxOpen ? (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-overlay p-4 backdrop-blur-xl sm:p-8"
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Visualização ampliada: ${active.label}`}
-          onClick={() => setLightboxOpen(false)}
-        >
-          <button
-            type="button"
-            onClick={() => setLightboxOpen(false)}
-            className="absolute right-4 top-4 z-10 rounded-full border border-border bg-surface p-2 text-muted-foreground transition hover:text-heading sm:right-8 sm:top-8"
-            aria-label="Fechar visualização ampliada"
-          >
-            <CloseIcon className="h-6 w-6" />
-          </button>
-
-          {items.length > 1 ? (
-            <>
-              <button
-                type="button"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  goPrev();
-                }}
-                className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full border border-border bg-surface p-3 text-muted-foreground transition hover:text-heading sm:left-6"
-                aria-label="Imagem anterior"
-              >
-                <ChevronLeftIcon className="h-6 w-6" />
-              </button>
-
-              <button
-                type="button"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  goNext();
-                }}
-                className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full border border-border bg-surface p-3 text-muted-foreground transition hover:text-heading sm:right-6"
-                aria-label="Próxima imagem"
-              >
-                <ChevronRightIcon className="h-6 w-6" />
-              </button>
-            </>
-          ) : null}
-
-          <div
-            className="relative max-h-[85vh] w-full max-w-6xl"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="relative max-h-[75vh] min-h-[240px] overflow-hidden rounded-2xl border border-border bg-lightbox shadow-2xl">
-              <Image
-                src={active.src}
-                alt={active.alt}
-                width={1920}
-                height={1080}
-                className="mx-auto max-h-[75vh] w-auto max-w-full object-contain"
-                sizes="100vw"
-                priority
-              />
-            </div>
-            <p className="mt-4 text-center text-sm font-medium text-foreground">
-              {active.label}
-            </p>
-          </div>
-        </div>
-      ) : null}
+      {mounted && lightbox ? createPortal(lightbox, document.body) : null}
     </>
   );
 }
