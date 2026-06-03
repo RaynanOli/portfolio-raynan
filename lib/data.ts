@@ -3,8 +3,9 @@ export const site = {
   headline:
     "Desenvolvedor de Sistemas, Business Intelligence, Automação de Processos e Soluções com Inteligência Artificial.",
   about: [
-    "Estudante de Engenharia de Software com foco em desenvolvimento de sistemas, Business Intelligence, automação de processos e aplicação de Inteligência Artificial em soluções corporativas.",
-    "Atualmente atuo na Suzano contribuindo para projetos de Power BI, SAP, automações operacionais e iniciativas voltadas à otimização de processos através de tecnologia e análise de dados.",
+    "Estudante de Engenharia de Software com experiência em análise de dados, Business Intelligence, automação de processos e desenvolvimento de soluções digitais.",
+    "Atuo com integração e tratamento de dados, criação de dashboards em Power BI, automações em Python e desenvolvimento de aplicações voltadas para otimização de processos.",
+    "Possuo conhecimento em SQL, modelagem de dados e desenvolvimento web, combinando visão analítica e técnica para transformar dados em soluções eficientes.",
   ],
   careerGoal:
     "Meu objetivo é desenvolver soluções que combinem desenvolvimento de software, dados, automação e inteligência artificial para gerar eficiência operacional e apoiar a tomada de decisões.",
@@ -199,14 +200,29 @@ export const expertiseAreas = [
 export const experience = {
   work: [
     {
-      company: "Suzano",
-      role: "Contribuição em projetos corporativos",
-      period: "Atual",
+      company: "Transportadora Aparecida",
+      role: "Estagiário · Jacareí/SP",
+      period: "Maio 2026 - Atual",
       highlights: [
-        "Power BI e dashboards estratégicos",
-        "Integrações e processos SAP",
-        "Automações operacionais",
-        "Otimização de processos com dados",
+        "Administração, integração e análise de dados logísticos e operacionais.",
+        "Desenvolvimento de relatórios e dashboards para acompanhamento de indicadores e apoio à tomada de decisão.",
+        "Automatização de processos de coleta, atualização e tratamento de dados.",
+        "Redução de atividades manuais e aumento da eficiência operacional.",
+        "Desenvolvimento do Herotrack, portal de rastreamento de cargas em tempo real.",
+        "Criação de soluções para aumentar a visibilidade das operações logísticas para clientes e fornecedores.",
+      ],
+    },
+    {
+      company: "Suzano",
+      role: "Estagiário · Jacareí/SP",
+      period: "Maio 2025 - Maio 2026",
+      highlights: [
+        "Planejamento e controle de processos de Reparo Externo.",
+        "Desenvolvimento de dashboards em Power BI para indicadores de reparo.",
+        "Automação da atualização de dados através de scripts.",
+        "Eliminação de atividades manuais em planilhas e relatórios.",
+        "Desenvolvimento de robô RPA integrado ao SAP.",
+        "Otimização de processos operacionais e redução do tempo de resposta.",
       ],
     },
   ],
