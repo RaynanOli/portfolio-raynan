@@ -1,7 +1,6 @@
 import { contactLinks, contactLocation } from "@/lib/data";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { GithubIcon, LinkedinIcon, MailIcon } from "@/components/icons";
-import { ResumeDownload } from "@/components/ResumeDownload";
 import { SectionHeader } from "@/components/SectionHeader";
 
 const iconMap = {
@@ -57,13 +56,6 @@ export function Contact() {
               {contactLocation.description}
             </p>
           </div>
-        </div>
-
-        <div className="mt-8 flex justify-center sm:mt-10">
-          <ResumeDownload
-            variant="secondary"
-            className="w-full max-w-sm sm:w-auto"
-          />
         </div>
       </div>
     </AnimatedSection>

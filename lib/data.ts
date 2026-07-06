@@ -327,9 +327,3 @@ export const contactLinks = [
     description: "raynan.maciel8@gmail.com",
   },
 ] as const;
-
-export const resume = {
-  href: "/curriculo/curriculo%20raynan.pdf",
-  fileName: "curriculo-raynan.pdf",
-  label: "Baixar Currículo",
-} as const;

@@ -1,6 +1,5 @@
 import { site } from "@/lib/data";
 import { ArrowDownIcon } from "@/components/icons";
-import { ResumeDownload } from "@/components/ResumeDownload";
 
 export function Hero() {
   return (
@@ -51,10 +50,6 @@ export function Hero() {
           >
             Entrar em contato
           </a>
-          <ResumeDownload
-            variant="primary"
-            className="w-full sm:w-auto sm:min-w-[180px]"
-          />
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs text-muted sm:mt-12">
