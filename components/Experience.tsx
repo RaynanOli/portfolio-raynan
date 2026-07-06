@@ -52,30 +52,63 @@ export function Experience() {
             </div>
           </div>
 
-          <div>
-            <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-muted">
-              Formação Acadêmica
-            </h3>
-            <div className="relative space-y-0">
-              {experience.education.map((item, index) => (
-                <article
-                  key={item.title}
-                  className="relative flex gap-4 pb-8 last:pb-0"
-                >
-                  {index < experience.education.length - 1 ? (
-                    <span className="absolute left-[11px] top-8 h-[calc(100%-1rem)] w-px bg-border" />
-                  ) : null}
-                  <span className="relative z-10 mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-violet-border bg-violet-soft">
-                    <span className="h-2 w-2 rounded-full bg-violet-500" />
-                  </span>
-                  <div className="min-w-0 flex-1 rounded-2xl border border-border bg-surface p-4 backdrop-blur-sm sm:p-5">
-                    <h4 className="font-semibold text-heading">{item.title}</h4>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      {item.institution}
-                    </p>
-                  </div>
-                </article>
-              ))}
+          <div className="space-y-10">
+            <div>
+              <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-muted">
+                Formação Acadêmica
+              </h3>
+              <div className="relative space-y-0">
+                {experience.education.map((item, index) => (
+                  <article
+                    key={item.title}
+                    className="relative flex gap-4 pb-8 last:pb-0"
+                  >
+                    {index < experience.education.length - 1 ? (
+                      <span className="absolute left-[11px] top-8 h-[calc(100%-1rem)] w-px bg-border" />
+                    ) : null}
+                    <span className="relative z-10 mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-violet-border bg-violet-soft">
+                      <span className="h-2 w-2 rounded-full bg-violet-500" />
+                    </span>
+                    <div className="min-w-0 flex-1 rounded-2xl border border-border bg-surface p-4 backdrop-blur-sm sm:p-5">
+                      <h4 className="font-semibold text-heading">
+                        {item.title}
+                      </h4>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        {item.institution}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-muted">
+                Formação Complementar
+              </h3>
+              <div className="space-y-4">
+                {experience.complementaryEducation.map((item) => (
+                  <article
+                    key={item.title}
+                    className="rounded-2xl border border-border bg-surface p-5 backdrop-blur-sm sm:p-6"
+                  >
+                    <h4 className="text-lg font-semibold text-heading sm:text-xl">
+                      {item.title}
+                    </h4>
+                    <ul className="mt-4 space-y-2">
+                      {item.courses.map((course) => (
+                        <li
+                          key={course}
+                          className="flex items-start gap-3 text-sm text-muted-foreground"
+                        >
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-500" />
+                          {course}
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </div>

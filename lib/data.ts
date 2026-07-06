@@ -235,9 +235,36 @@ export const experience = {
       title: "Análise e Desenvolvimento de Sistemas",
       institution: "UMC",
     },
+  ],
+  complementaryEducation: [
     {
-      title: "Analista de BI",
-      institution: "Escola DNC",
+      title: "Microsoft / SENAI",
+      courses: [
+        "Microsoft Azure Fundamentals (AZ-900)",
+        "Microsoft Azure AI Fundamentals (AI-900)",
+        "Microsoft Azure Data Fundamentals (DP-900)",
+      ],
+    },
+    {
+      title: "Fundação Bradesco",
+      courses: [
+        "Fundamentos de Power BI",
+        "Conhecimentos em Banco de Dados",
+      ],
+    },
+    {
+      title: "Escola DNC",
+      courses: [
+        "Analista de BI",
+        "SQL para Análise de Dados",
+        "Power BI",
+        "Power BI Intermediário",
+        "DAX",
+        "Scrum",
+        "Google Analytics 4",
+        "Princípios de Arquitetura de Software",
+        "Segurança e LGPD para Profissionais de TI",
+      ],
     },
   ],
 } as const;
