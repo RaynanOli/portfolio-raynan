@@ -204,12 +204,12 @@ export const experience = {
       role: "Assistente de Dados Jr · Jacareí/SP",
       period: "Julho 2026 - Atual",
       highlights: [
-        "Administração, integração e análise de dados logísticos e operacionais.",
-        "Desenvolvimento de relatórios e dashboards para acompanhamento de indicadores e apoio à tomada de decisão.",
-        "Automatização de processos de coleta, atualização e tratamento de dados.",
-        "Redução de atividades manuais e aumento da eficiência operacional.",
-        "Desenvolvimento do Herotrack, portal de rastreamento de cargas em tempo real.",
-        "Criação de soluções para aumentar a visibilidade das operações logísticas para clientes e fornecedores.",
+        "Administração, integração e tratamento de dados logísticos e operacionais.",
+        "Desenvolvimento de dashboards e relatórios em Power BI para acompanhamento de indicadores estratégicos.",
+        "Automação de processos utilizando Python e SQL para redução de atividades manuais.",
+        "Desenvolvimento do HeroTrack, plataforma de rastreamento de cargas em tempo real.",
+        "Criação de soluções voltadas à otimização operacional e aumento da visibilidade logística.",
+        "Apoio à tomada de decisão através da análise de indicadores e dados corporativos.",
       ],
     },
     {
@@ -217,12 +217,12 @@ export const experience = {
       role: "Atuação em BI e Automação · Jacareí/SP",
       period: "Maio 2025 - Maio 2026",
       highlights: [
-        "Planejamento e controle de processos de Reparo Externo.",
-        "Desenvolvimento de dashboards em Power BI para indicadores de reparo.",
-        "Automação da atualização de dados através de scripts.",
-        "Eliminação de atividades manuais em planilhas e relatórios.",
-        "Desenvolvimento de robô RPA integrado ao SAP.",
-        "Otimização de processos operacionais e redução do tempo de resposta.",
+        "Planejamento e controle dos processos de Reparo Externo.",
+        "Desenvolvimento de dashboards em Power BI para acompanhamento de indicadores operacionais.",
+        "Automação da atualização de bases de dados utilizando Python.",
+        "Eliminação de atividades manuais através de automações e integração de informações.",
+        "Desenvolvimento de robôs RPA integrados ao SAP.",
+        "Apoio à melhoria contínua dos processos e aumento da eficiência operacional.",
       ],
     },
   ],
@@ -238,6 +238,7 @@ export const experience = {
   ],
   complementaryEducation: [
     {
+      icon: "☁️",
       title: "Microsoft / SENAI",
       courses: [
         "Microsoft Azure Fundamentals (AZ-900)",
@@ -246,6 +247,7 @@ export const experience = {
       ],
     },
     {
+      icon: "🏦",
       title: "Fundação Bradesco",
       courses: [
         "Fundamentos de Power BI",
@@ -253,6 +255,7 @@ export const experience = {
       ],
     },
     {
+      icon: "🎓",
       title: "Escola DNC",
       courses: [
         "Analista de BI",
@@ -267,20 +270,45 @@ export const experience = {
       ],
     },
   ],
+  certifications: [
+    {
+      icon: "☁️",
+      title: "Microsoft Azure Fundamentals (AZ-900)",
+    },
+    {
+      icon: "🤖",
+      title: "Microsoft Azure AI Fundamentals (AI-900)",
+    },
+    {
+      icon: "🗄️",
+      title: "Microsoft Azure Data Fundamentals (DP-900)",
+    },
+  ],
+  certificationsNote:
+    "Formações concluídas com foco nos conteúdos Microsoft Azure Fundamentals (AZ-900), Azure AI Fundamentals (AI-900) e Azure Data Fundamentals (DP-900), realizadas durante a formação técnica no SENAI.",
 } as const;
 
 export const techCategories = [
   {
     title: "Desenvolvimento",
-    items: ["React", "Next.js", "TypeScript", "JavaScript", "Python", "SQL"],
+    items: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "SQL",
+      "Git",
+      "GitHub",
+    ],
   },
   {
     title: "Business Intelligence",
-    items: ["Power BI", "Modelagem de Dados", "ETL", "Dashboards"],
+    items: ["Power BI", "DAX", "ETL", "Modelagem de Dados", "Dashboards"],
   },
   {
-    title: "Automação",
-    items: ["RPA", "SAP", "Process Automation"],
+    title: "Cloud & Automação",
+    items: ["Azure", "Power Automate", "SAP", "RPA", "Process Automation"],
   },
   {
     title: "Inteligência Artificial",
@@ -292,6 +320,11 @@ export const techCategories = [
     ],
   },
 ] as const;
+
+export const contactLocation = {
+  label: "Localização",
+  description: "Jacareí/SP",
+} as const;
 
 export const contactLinks = [
   {

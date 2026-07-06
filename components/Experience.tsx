@@ -92,23 +92,60 @@ export function Experience() {
                     key={item.title}
                     className="rounded-2xl border border-border bg-surface p-5 backdrop-blur-sm sm:p-6"
                   >
-                    <h4 className="text-lg font-semibold text-heading sm:text-xl">
-                      {item.title}
-                    </h4>
-                    <ul className="mt-4 space-y-2">
-                      {item.courses.map((course) => (
-                        <li
-                          key={course}
-                          className="flex items-start gap-3 text-sm text-muted-foreground"
-                        >
-                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-500" />
-                          {course}
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="flex items-start gap-3">
+                      <span
+                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-border bg-surface-elevated text-lg"
+                        aria-hidden="true"
+                      >
+                        {item.icon}
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <h4 className="text-lg font-semibold text-heading sm:text-xl">
+                          {item.title}
+                        </h4>
+                        <ul className="mt-4 space-y-2">
+                          {item.courses.map((course) => (
+                            <li
+                              key={course}
+                              className="flex items-start gap-3 text-sm text-muted-foreground"
+                            >
+                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-500" />
+                              {course}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
                   </article>
                 ))}
               </div>
+            </div>
+
+            <div>
+              <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-muted">
+                Certificações
+              </h3>
+              <div className="space-y-3">
+                {experience.certifications.map((item) => (
+                  <article
+                    key={item.title}
+                    className="flex items-center gap-3 rounded-2xl border border-border bg-surface p-4 backdrop-blur-sm sm:p-5"
+                  >
+                    <span
+                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-border bg-surface-elevated text-lg"
+                      aria-hidden="true"
+                    >
+                      {item.icon}
+                    </span>
+                    <h4 className="text-sm font-semibold text-heading sm:text-base">
+                      {item.title}
+                    </h4>
+                  </article>
+                ))}
+              </div>
+              <p className="mt-4 rounded-xl border border-disclaimer-border bg-disclaimer-bg px-4 py-3 text-xs leading-relaxed text-disclaimer-text sm:text-sm">
+                {experience.certificationsNote}
+              </p>
             </div>
           </div>
         </div>

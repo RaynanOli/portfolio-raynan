@@ -1,4 +1,4 @@
-import { contactLinks } from "@/lib/data";
+import { contactLinks, contactLocation } from "@/lib/data";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { GithubIcon, LinkedinIcon, MailIcon } from "@/components/icons";
 import { ResumeDownload } from "@/components/ResumeDownload";
@@ -20,7 +20,7 @@ export function Contact() {
           description="Entre em contato para conversar sobre projetos, oportunidades ou colaborações."
         />
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {contactLinks.map((link) => {
             const Icon = iconMap[link.label as keyof typeof iconMap];
 
@@ -46,6 +46,17 @@ export function Contact() {
               </a>
             );
           })}
+          <div className="rounded-2xl border border-border bg-surface p-5 backdrop-blur-sm sm:p-6">
+            <div className="mb-4 inline-flex rounded-xl border border-border bg-surface-elevated p-3 text-lg">
+              <span aria-hidden="true">📍</span>
+            </div>
+            <h3 className="text-lg font-semibold text-heading">
+              {contactLocation.label}
+            </h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {contactLocation.description}
+            </p>
+          </div>
         </div>
 
         <div className="mt-8 flex justify-center sm:mt-10">
