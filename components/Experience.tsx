@@ -120,33 +120,6 @@ export function Experience() {
                 ))}
               </div>
             </div>
-
-            <div>
-              <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-muted">
-                Certificações
-              </h3>
-              <div className="space-y-3">
-                {experience.certifications.map((item) => (
-                  <article
-                    key={item.title}
-                    className="flex items-center gap-3 rounded-2xl border border-border bg-surface p-4 backdrop-blur-sm sm:p-5"
-                  >
-                    <span
-                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-border bg-surface-elevated text-lg"
-                      aria-hidden="true"
-                    >
-                      {item.icon}
-                    </span>
-                    <h4 className="text-sm font-semibold text-heading sm:text-base">
-                      {item.title}
-                    </h4>
-                  </article>
-                ))}
-              </div>
-              <p className="mt-4 rounded-xl border border-disclaimer-border bg-disclaimer-bg px-4 py-3 text-xs leading-relaxed text-disclaimer-text sm:text-sm">
-                {experience.certificationsNote}
-              </p>
-            </div>
           </div>
         </div>
       </div>

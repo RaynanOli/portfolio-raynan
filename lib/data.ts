@@ -3,9 +3,9 @@ export const site = {
   headline:
     "Desenvolvedor de Sistemas, Business Intelligence, Automação de Processos e Soluções com Inteligência Artificial.",
   about: [
-    "Estudante de Engenharia de Software com experiência em análise de dados, Business Intelligence, automação de processos e desenvolvimento de soluções digitais.",
-    "Atuo com integração e tratamento de dados, criação de dashboards em Power BI, automações em Python e desenvolvimento de aplicações voltadas para otimização de processos.",
-    "Possuo conhecimento em SQL, modelagem de dados e desenvolvimento web, combinando visão analítica e técnica para transformar dados em soluções eficientes.",
+    "Atualmente atuo como Assistente de Dados Jr, desenvolvendo soluções voltadas para análise de dados, Business Intelligence, automação de processos e otimização operacional.",
+    "Sou estudante de Engenharia de Software e possuo experiência na integração e tratamento de dados, criação de dashboards em Power BI, automações utilizando Python e desenvolvimento de aplicações voltadas à melhoria de processos.",
+    "Tenho conhecimentos em SQL, modelagem de dados, desenvolvimento web e tecnologias Microsoft, combinando visão analítica e técnica para transformar dados em soluções eficientes para o negócio.",
   ],
   careerGoal:
     "Meu objetivo é desenvolver soluções que combinem desenvolvimento de software, dados, automação e inteligência artificial para gerar eficiência operacional e apoiar a tomada de decisões.",
@@ -270,22 +270,6 @@ export const experience = {
       ],
     },
   ],
-  certifications: [
-    {
-      icon: "☁️",
-      title: "Microsoft Azure Fundamentals (AZ-900)",
-    },
-    {
-      icon: "🤖",
-      title: "Microsoft Azure AI Fundamentals (AI-900)",
-    },
-    {
-      icon: "🗄️",
-      title: "Microsoft Azure Data Fundamentals (DP-900)",
-    },
-  ],
-  certificationsNote:
-    "Formações concluídas com foco nos conteúdos Microsoft Azure Fundamentals (AZ-900), Azure AI Fundamentals (AI-900) e Azure Data Fundamentals (DP-900), realizadas durante a formação técnica no SENAI.",
 } as const;
 
 export const techCategories = [
