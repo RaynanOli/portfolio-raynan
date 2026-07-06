@@ -200,9 +200,9 @@ export const expertiseAreas = [
 export const experience = {
   work: [
     {
-      company: "Transportadora Aparecida",
-      role: "Estagiário · Jacareí/SP",
-      period: "Maio 2026 - Atual",
+      company: "Transportes Aparecida",
+      role: "Assistente de Dados Jr · Jacareí/SP",
+      period: "Julho 2026 - Atual",
       highlights: [
         "Administração, integração e análise de dados logísticos e operacionais.",
         "Desenvolvimento de relatórios e dashboards para acompanhamento de indicadores e apoio à tomada de decisão.",
@@ -214,7 +214,7 @@ export const experience = {
     },
     {
       company: "Suzano",
-      role: "Estagiário · Jacareí/SP",
+      role: "Atuação em BI e Automação · Jacareí/SP",
       period: "Maio 2025 - Maio 2026",
       highlights: [
         "Planejamento e controle de processos de Reparo Externo.",
