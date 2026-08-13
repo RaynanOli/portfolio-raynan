@@ -1,7 +1,7 @@
 export const site = {
   name: "Raynan Maciel",
   headline:
-    "Desenvolvedor de Sistemas, Business Intelligence, Automação de Processos e Soluções com Inteligência Artificial.",
+    "Assistente de Dados Júnior | BI, Automação e Desenvolvimento de Sistemas",
   about: [
     "Atualmente atuo como Assistente de Dados Júnior, com experiência em análise de dados, Business Intelligence, automação de processos e desenvolvimento de soluções digitais.",
     "Atuo com integração e tratamento de dados, criação de dashboards em Power BI, automações em Python, SQL e desenvolvimento de aplicações voltadas para otimização de processos.",
@@ -41,7 +41,6 @@ export const projects = [
       "Tailwind CSS",
       "Leaflet",
       "OSRM",
-      "Business Intelligence",
     ],
     badge: "Projeto Principal",
     featured: true,
@@ -173,7 +172,7 @@ export const expertiseAreas = [
   {
     title: "Inteligência Artificial Aplicada",
     description:
-      "Conhecimentos complementares em IA generativa, engenharia de prompt e aplicações de IA para apoio a processos e decisões.",
+      "Conhecimentos complementares em IA generativa, engenharia de prompt e aplicações de IA — não constituem experiência profissional consolidada.",
   },
   {
     title: "Bancos de Dados",
@@ -251,7 +250,7 @@ export const experience = {
       icon: "🎓",
       title: "Escola DNC",
       courses: [
-        "Analista de BI (Certificação)",
+        "Analista de BI — Escola DNC",
         "SQL para Análise de Dados",
         "Power BI",
         "Power BI Intermediário",
@@ -292,7 +291,7 @@ export const techCategories = [
     items: ["Git", "GitHub", "Scrum", "Kanban", "Pacote Office"],
   },
   {
-    title: "Inteligência Artificial",
+    title: "Inteligência Artificial — Conhecimentos Complementares",
     items: [
       "IA Generativa",
       "Engenharia de Prompt",
@@ -319,7 +318,7 @@ export const contactLinks = [
   },
   {
     label: "Email",
-    href: "mailto:raynan.oli8@gmail.com",
-    description: "raynan.oli8@gmail.com",
+    href: "mailto:raynanoli8@gmail.com",
+    description: "raynanoli8@gmail.com",
   },
 ] as const;

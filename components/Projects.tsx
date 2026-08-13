@@ -67,7 +67,7 @@ export function Projects() {
         <SectionHeader
           eyebrow="Projetos"
           title="Soluções que geram impacto"
-          description="Projetos que unem engenharia de software, dados, automação e arquitetura corporativa."
+          description="Projetos que unem engenharia de software, dados, automação e soluções corporativas."
         />
 
         <div className="space-y-6">
