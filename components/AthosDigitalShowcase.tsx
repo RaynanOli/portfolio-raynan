@@ -2,7 +2,7 @@ import { projects } from "@/lib/data";
 import { ProjectGallery } from "@/components/ProjectGallery";
 
 const athosProject = projects.find(
-  (project) => project.title === "Projeto Athos Digital",
+  (project) => project.title === "Athos Digital",
 );
 
 export function AthosDigitalShowcase() {

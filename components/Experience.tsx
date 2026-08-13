@@ -9,7 +9,7 @@ export function Experience() {
         <SectionHeader
           eyebrow="Experiência"
           title="Trajetória profissional e formação"
-          description="Atuação corporativa aliada a formação contínua em engenharia, dados e inteligência artificial."
+          description="Atuação corporativa aliada a formação contínua em engenharia, dados, automação e conhecimentos complementares em IA aplicada."
         />
 
         <div className="grid gap-8 lg:grid-cols-2">
@@ -76,6 +76,16 @@ export function Experience() {
                       <p className="mt-1 text-sm text-muted-foreground">
                         {item.institution}
                       </p>
+                      {"degree" in item && item.degree ? (
+                        <p className="mt-1 text-sm text-muted-foreground">
+                          {item.degree}
+                        </p>
+                      ) : null}
+                      {"detail" in item && item.detail ? (
+                        <p className="mt-1 text-sm text-accent-text">
+                          {item.detail}
+                        </p>
+                      ) : null}
                     </div>
                   </article>
                 ))}

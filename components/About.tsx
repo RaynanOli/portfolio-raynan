@@ -35,7 +35,7 @@ export function About() {
               {[
                 { value: "BI", label: "Análise de dados" },
                 { value: "SAP", label: "Processos corporativos" },
-                { value: "IA", label: "Soluções inteligentes" },
+                { value: "IA", label: "Conhecimentos em IA" },
                 { value: "Dev", label: "Engenharia de software" },
               ].map((item) => (
                 <div

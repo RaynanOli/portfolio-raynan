@@ -7,6 +7,7 @@ const categoryColors = [
   "from-violet-500/15 to-violet-500/5 border-violet-border",
   "from-blue-500/15 to-blue-500/5 border-blue-400/20",
   "from-emerald-500/15 to-emerald-500/5 border-emerald-400/20",
+  "from-amber-500/15 to-amber-500/5 border-amber-400/20",
 ];
 
 export function Technologies() {
@@ -16,7 +17,7 @@ export function Technologies() {
         <SectionHeader
           eyebrow="Tecnologias"
           title="Stack multidisciplinar"
-          description="Ferramentas e competências que aplico em projetos de software, dados, automação e IA."
+          description="Ferramentas e competências que aplico em projetos de software, dados, automação e conhecimentos complementares em IA."
         />
 
         <div className="grid gap-6 sm:grid-cols-2">

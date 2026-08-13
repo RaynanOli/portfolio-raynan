@@ -3,12 +3,12 @@ export const site = {
   headline:
     "Desenvolvedor de Sistemas, Business Intelligence, Automação de Processos e Soluções com Inteligência Artificial.",
   about: [
-    "Atualmente atuo como Assistente de Dados Jr, desenvolvendo soluções voltadas para análise de dados, Business Intelligence, automação de processos e otimização operacional.",
-    "Sou estudante de Engenharia de Software e possuo experiência na integração e tratamento de dados, criação de dashboards em Power BI, automações utilizando Python e desenvolvimento de aplicações voltadas à melhoria de processos.",
-    "Tenho conhecimentos em SQL, modelagem de dados, desenvolvimento web e tecnologias Microsoft, combinando visão analítica e técnica para transformar dados em soluções eficientes para o negócio.",
+    "Atualmente atuo como Assistente de Dados Júnior, com experiência em análise de dados, Business Intelligence, automação de processos e desenvolvimento de soluções digitais.",
+    "Atuo com integração e tratamento de dados, criação de dashboards em Power BI, automações em Python, SQL e desenvolvimento de aplicações voltadas para otimização de processos.",
+    "Sou estudante de Engenharia de Software e possuo conhecimentos em modelagem de dados, desenvolvimento web e tecnologias Microsoft, combinando visão analítica e técnica para transformar dados em soluções eficientes para o negócio.",
   ],
   careerGoal:
-    "Meu objetivo é desenvolver soluções que combinem desenvolvimento de software, dados, automação e inteligência artificial para gerar eficiência operacional e apoiar a tomada de decisões.",
+    "Meu objetivo é desenvolver soluções que combinem desenvolvimento de software, dados e automação, ampliando conhecimentos em inteligência artificial aplicada para gerar eficiência operacional e apoiar a tomada de decisões.",
 } as const;
 
 export const navItems = [
@@ -25,7 +25,7 @@ export const projects = [
     title: "Herotrack",
     emoji: "🚛",
     description:
-      "Plataforma completa de rastreamento e gestão logística desenvolvida com Next.js, React, TypeScript, Leaflet e OSRM.",
+      "Plataforma web para rastreamento de cargas e acompanhamento de operações logísticas, com interface responsiva, dashboards e visualização de indicadores em tempo real.",
     highlights: [
       "Dashboard Operacional",
       "BI Analytics",
@@ -41,12 +41,12 @@ export const projects = [
       "Tailwind CSS",
       "Leaflet",
       "OSRM",
+      "Business Intelligence",
     ],
     badge: "Projeto Principal",
     featured: true,
     liveUrl: "https://herotrack.vercel.app",
-    shortDescription:
-      "Plataforma completa de rastreamento e gestão logística.",
+    shortDescription: "Portal de Rastreamento Logístico",
     gallery: [
       {
         label: "Landing Page",
@@ -109,26 +109,17 @@ export const projects = [
     ],
   },
   {
-    title: "Projeto Athos Digital",
+    title: "Athos Digital",
     description:
-      "Participação no aprimoramento de uma plataforma de Business Intelligence voltada à expansão de dashboards, personalização de KPIs e evolução da estrutura de dados para atendimento de diferentes segmentos de negócio.",
+      "Participação na produção de dashboards e construção de estratégias de Business Intelligence, com foco em indicadores de negócio, KPIs e integração de dados.",
     highlights: [
-      "Desenvolvimento de Dashboards",
-      "Business Intelligence",
-      "Estruturação de Dados",
-      "KPIs Estratégicos",
-      "Integração de Dados",
-      "Análise de Indicadores",
+      "Desenvolvimento de dashboards estratégicos para análise de indicadores de negócio",
+      "Criação de KPIs e processos ETL para integração e tratamento de dados",
+      "Desenvolvimento de análises para apoio à tomada de decisão",
     ],
-    technologies: [
-      "Power BI",
-      "Excel",
-      "SQL",
-      "Business Intelligence",
-      "Data Analysis",
-    ],
+    technologies: ["Power BI", "SQL", "ETL", "Excel Avançado", "Modelagem de Dados"],
     featured: false,
-    badge: "Projeto Corporativo",
+    badge: "Projeto / Participação",
     gallery: [
       {
         label: "Dashboard BI",
@@ -182,7 +173,7 @@ export const expertiseAreas = [
   {
     title: "Inteligência Artificial Aplicada",
     description:
-      "Soluções com IA generativa e automação inteligente para negócios.",
+      "Conhecimentos complementares em IA generativa, engenharia de prompt e aplicações de IA para apoio a processos e decisões.",
   },
   {
     title: "Bancos de Dados",
@@ -200,28 +191,25 @@ export const experience = {
   work: [
     {
       company: "Transportes Aparecida",
-      role: "Assistente de Dados Jr · Jacareí/SP",
+      role: "Assistente de Dados Júnior · Jacareí/SP",
       period: "Julho 2026 - Atual",
       highlights: [
-        "Administração, integração e tratamento de dados logísticos e operacionais.",
-        "Desenvolvimento de dashboards e relatórios em Power BI para acompanhamento de indicadores estratégicos.",
-        "Automação de processos utilizando Python e SQL para redução de atividades manuais.",
-        "Desenvolvimento do HeroTrack, plataforma de rastreamento de cargas em tempo real.",
-        "Criação de soluções voltadas à otimização operacional e aumento da visibilidade logística.",
-        "Apoio à tomada de decisão através da análise de indicadores e dados corporativos.",
+        "Administração, integração e análise de dados logísticos e operacionais.",
+        "Desenvolvimento de relatórios e dashboards em Power BI para acompanhamento de indicadores e apoio à tomada de decisão.",
+        "Automatização de processos de coleta, atualização e tratamento de dados, reduzindo atividades manuais.",
+        "Responsável pelo desenvolvimento do HeroTrack, plataforma web para rastreamento de cargas em tempo real, ampliando a visibilidade das operações logísticas.",
+        "Desenvolvimento e evolução contínua da plataforma, com foco em integração de dados, usabilidade e novas funcionalidades.",
       ],
     },
     {
       company: "Suzano",
-      role: "Atuação em BI e Automação · Jacareí/SP",
+      role: "Estagiário · Jacareí/SP",
       period: "Maio 2025 - Maio 2026",
       highlights: [
-        "Planejamento e controle dos processos de Reparo Externo.",
-        "Desenvolvimento de dashboards em Power BI para acompanhamento de indicadores operacionais.",
-        "Automação da atualização de bases de dados utilizando Python.",
-        "Eliminação de atividades manuais através de automações e integração de informações.",
-        "Desenvolvimento de robôs RPA integrados ao SAP.",
-        "Apoio à melhoria contínua dos processos e aumento da eficiência operacional.",
+        "Atuação direta no planejamento e controle de processos de Reparo Externo, garantindo o cumprimento de cronogramas e fluxos da área.",
+        "Desenvolvi por iniciativa própria dashboards em Power BI que trouxeram visibilidade aos indicadores de reparo, facilitando o controle gerencial.",
+        "Implementei scripts para a atualização automática de dados, eliminando a necessidade de alimentação manual das planilhas e relatórios.",
+        "Desenvolvimento de robô RPA para automatizar tarefas transacionais e repetitivas dentro do SAP, otimizando o tempo de resposta da operação.",
       ],
     },
   ],
@@ -229,10 +217,14 @@ export const experience = {
     {
       title: "Engenharia de Software",
       institution: "UMC",
+      degree: "Bacharelado",
+      detail: "Previsão de conclusão: Janeiro de 2028",
     },
     {
       title: "Análise e Desenvolvimento de Sistemas",
       institution: "UMC",
+      degree: "Tecnólogo",
+      detail: "Concluído em Dezembro de 2025",
     },
   ],
   complementaryEducation: [
@@ -243,6 +235,8 @@ export const experience = {
         "Microsoft Azure Fundamentals (AZ-900)",
         "Microsoft Azure AI Fundamentals (AI-900)",
         "Microsoft Azure Data Fundamentals (DP-900)",
+        "Microsoft Security, Compliance, and Identity Fundamentals (SC-900)",
+        "Microsoft Power BI Data Analyst (PL-300)",
       ],
     },
     {
@@ -257,7 +251,7 @@ export const experience = {
       icon: "🎓",
       title: "Escola DNC",
       courses: [
-        "Analista de BI",
+        "Analista de BI (Certificação)",
         "SQL para Análise de Dados",
         "Power BI",
         "Power BI Intermediário",
@@ -273,32 +267,35 @@ export const experience = {
 
 export const techCategories = [
   {
+    title: "Análise de Dados & BI",
+    items: ["Power BI", "SQL", "ETL", "Modelagem de Dados", "Excel Avançado"],
+  },
+  {
     title: "Desenvolvimento",
     items: [
+      "Python",
+      "Java",
+      "JavaScript",
       "React",
       "Next.js",
       "TypeScript",
-      "JavaScript",
-      "Python",
-      "SQL",
-      "Git",
-      "GitHub",
+      "HTML5",
+      "CSS3",
     ],
   },
   {
-    title: "Business Intelligence",
-    items: ["Power BI", "DAX", "ETL", "Modelagem de Dados", "Dashboards"],
+    title: "Automação & Sistemas",
+    items: ["SAP", "RPA", "Integração de Dados", "Automação de Processos"],
   },
   {
-    title: "Cloud & Automação",
-    items: ["Azure", "Power Automate", "SAP", "RPA", "Process Automation"],
+    title: "Ferramentas",
+    items: ["Git", "GitHub", "Scrum", "Kanban", "Pacote Office"],
   },
   {
     title: "Inteligência Artificial",
     items: [
       "IA Generativa",
       "Engenharia de Prompt",
-      "Automação Inteligente",
       "IA Aplicada a Negócios",
     ],
   },
@@ -322,7 +319,7 @@ export const contactLinks = [
   },
   {
     label: "Email",
-    href: "mailto:raynan.maciel8@gmail.com",
-    description: "raynan.maciel8@gmail.com",
+    href: "mailto:raynan.oli8@gmail.com",
+    description: "raynan.oli8@gmail.com",
   },
 ] as const;

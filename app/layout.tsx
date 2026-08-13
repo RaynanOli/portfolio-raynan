@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Raynan Maciel | Desenvolvedor de Sistemas, BI e IA",
   description:
-    "Portfólio de Raynan Maciel — desenvolvimento de sistemas, Business Intelligence, automação de processos e soluções com Inteligência Artificial.",
+    "Portfólio de Raynan Maciel — desenvolvimento de sistemas, Business Intelligence, automação de processos e conhecimentos em inteligência artificial aplicada.",
   keywords: [
     "Raynan Maciel",
     "desenvolvedor",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Raynan Maciel | Desenvolvedor de Sistemas, BI e IA",
     description:
-      "Desenvolvimento de sistemas, Business Intelligence, automação de processos e soluções com Inteligência Artificial.",
+      "Desenvolvimento de sistemas, Business Intelligence, automação de processos e conhecimentos em inteligência artificial aplicada.",
     locale: "pt_BR",
     type: "website",
   },
