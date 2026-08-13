@@ -1,5 +1,5 @@
 import { projects } from "@/lib/data";
-import { ExternalLinkIcon, GithubIcon } from "@/components/icons";
+import { ExternalLinkIcon } from "@/components/icons";
 import { ProjectGallery } from "@/components/ProjectGallery";
 
 const herotrack = projects[0];
@@ -45,15 +45,6 @@ export function HerotrackShowcase() {
             >
               Ver Projeto
               <ExternalLinkIcon className="h-4 w-4" />
-            </a>
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-btn-secondary-border bg-btn-secondary-bg px-6 py-3 text-sm font-medium text-btn-secondary-fg backdrop-blur-sm transition hover:bg-surface-hover sm:w-auto"
-            >
-              <GithubIcon className="h-4 w-4" />
-              GitHub
             </a>
           </div>
         </div>
