@@ -45,7 +45,6 @@ export const projects = [
     badge: "Projeto Principal",
     featured: true,
     liveUrl: "https://herotrack.vercel.app",
-    githubUrl: "https://github.com/RaynanOli/herotrack",
     shortDescription:
       "Plataforma completa de rastreamento e gestão logística.",
     gallery: [
