@@ -8,13 +8,15 @@ export const site = {
     ],
     [
       "No meu dia a dia, trabalho com ",
-      "SQL, Power BI, Python, Excel e SAP",
+      { emphasis: "SQL, Power BI, Python, Excel e SAP" },
       ", buscando otimizar processos, organizar informações e transformar dados em soluções que facilitem a rotina das empresas.",
     ],
     [
       "Também desenvolvo aplicações web utilizando tecnologias como ",
-      "React, TypeScript e Supabase",
-      ". Entre meus projetos estão plataformas voltadas à gestão logística, controle de documentos e acompanhamento de indicadores operacionais.",
+      { emphasis: "React, TypeScript e Supabase" },
+      ". Entre meus projetos estão soluções voltadas a ",
+      { emphasis: "logística, automação de processos e Business Intelligence" },
+      ", com foco na resolução de problemas reais e na melhoria da eficiência operacional das empresas.",
     ],
   ],
   careerGoal:

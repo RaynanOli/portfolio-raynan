@@ -16,11 +16,15 @@ export function About() {
           <div className="rounded-2xl border border-border bg-surface p-6 backdrop-blur-sm sm:p-8">
             <h3 className="mb-4 text-lg font-semibold text-heading">Quem sou</h3>
             <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
-              {site.about.map(([before, emphasis, after]) => (
-                <p key={before}>
-                  {before}
-                  {emphasis ? <strong>{emphasis}</strong> : null}
-                  {after}
+              {site.about.map((paragraph) => (
+                <p key={paragraph[0]}>
+                  {paragraph.map((part) =>
+                    typeof part === "string" ? (
+                      part
+                    ) : (
+                      <strong key={part.emphasis}>{part.emphasis}</strong>
+                    ),
+                  )}
                 </p>
               ))}
             </div>
