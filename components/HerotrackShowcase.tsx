@@ -36,16 +36,19 @@ export function HerotrackShowcase() {
             </p>
           </div>
 
-          <div className="flex w-full shrink-0 flex-col gap-3 sm:w-auto sm:flex-row lg:flex-col xl:flex-row">
+          <div className="flex w-full shrink-0 flex-col gap-3 sm:w-fit lg:max-w-56 lg:items-end lg:text-right">
             <a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 px-6 py-3 text-sm font-semibold text-brand-fg transition hover:opacity-90 sm:w-auto"
             >
-              Ver Projeto
+              Ver demonstração
               <ExternalLinkIcon className="h-4 w-4" />
             </a>
+            <p className="text-xs leading-relaxed text-muted-foreground">
+              {project.demoNote}
+            </p>
           </div>
         </div>
 

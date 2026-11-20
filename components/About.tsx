@@ -8,8 +8,8 @@ export function About() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Sobre Mim"
-          title="Engenharia de software com visão de negócio"
-          description="Combino desenvolvimento, dados e automação para entregar soluções corporativas de alto impacto."
+          title="Desenvolvimento, dados e automação"
+          description="Trabalho com desenvolvimento de sistemas, análise de dados e automação de processos, buscando criar soluções que facilitem as atividades do dia a dia."
         />
 
         <div className="grid gap-6 lg:grid-cols-2">
@@ -17,7 +17,15 @@ export function About() {
             <h3 className="mb-4 text-lg font-semibold text-heading">Quem sou</h3>
             <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
               {site.about.map((paragraph) => (
-                <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+                <p key={paragraph[0]}>
+                  {paragraph.map((part) =>
+                    typeof part === "string" ? (
+                      part
+                    ) : (
+                      <strong key={part.emphasis}>{part.emphasis}</strong>
+                    ),
+                  )}
+                </p>
               ))}
             </div>
           </div>

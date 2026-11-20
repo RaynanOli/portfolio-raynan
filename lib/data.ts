@@ -3,12 +3,24 @@ export const site = {
   headline:
     "Assistente de Dados Júnior | BI, Automação e Desenvolvimento de Sistemas",
   about: [
-    "Atualmente atuo como Assistente de Dados Júnior, com experiência em análise de dados, Business Intelligence, automação de processos e desenvolvimento de soluções digitais.",
-    "Atuo com integração e tratamento de dados, criação de dashboards em Power BI, automações em Python, SQL e desenvolvimento de aplicações voltadas para otimização de processos.",
-    "Sou estudante de Engenharia de Software e possuo conhecimentos em modelagem de dados, desenvolvimento web e tecnologias Microsoft, combinando visão analítica e técnica para transformar dados em soluções eficientes para o negócio.",
+    [
+      "Sou estudante de Engenharia de Software e atuo como Assistente de Dados Júnior, com experiência em análise de dados, automação de processos e desenvolvimento de soluções tecnológicas.",
+    ],
+    [
+      "No meu dia a dia, trabalho com ",
+      { emphasis: "SQL, Power BI, Python, Excel e SAP" },
+      ", buscando otimizar processos, organizar informações e transformar dados em soluções que facilitem a rotina das empresas.",
+    ],
+    [
+      "Também desenvolvo aplicações web utilizando tecnologias como ",
+      { emphasis: "React, TypeScript e Supabase" },
+      ". Entre meus projetos estão soluções voltadas a ",
+      { emphasis: "logística, automação de processos e Business Intelligence" },
+      ", com foco na resolução de problemas reais e na melhoria da eficiência operacional das empresas.",
+    ],
   ],
   careerGoal:
-    "Meu objetivo é desenvolver soluções que combinem desenvolvimento de software, dados e automação, ampliando conhecimentos em inteligência artificial aplicada para gerar eficiência operacional e apoiar a tomada de decisões.",
+    "Quero desenvolver sistemas que simplifiquem tarefas e ajudem as equipes a tomar decisões com base em dados. Também quero aprofundar meus conhecimentos em inteligência artificial aplicada.",
 } as const;
 
 export const navItems = [
@@ -22,7 +34,7 @@ export const navItems = [
 
 export const projects = [
   {
-    title: "Herotrack",
+    title: "HeroTrack",
     emoji: "🚛",
     description:
       "Plataforma web para rastreamento de cargas e acompanhamento de operações logísticas, com interface responsiva, dashboards e visualização de indicadores em tempo real.",
@@ -43,8 +55,9 @@ export const projects = [
       "OSRM",
     ],
     badge: "Projeto Principal",
-    featured: true,
+    presentation: "showcase",
     liveUrl: "https://herotrack.vercel.app",
+    demoNote: "A demonstração usa a marca Marisa Transportes e dados simulados.",
     shortDescription: "Portal de Rastreamento Logístico",
     gallery: [
       {
@@ -81,7 +94,7 @@ export const projects = [
       "Relatórios Gerenciais",
     ],
     technologies: ["Power BI", "SQL", "ETL", "Modelagem de Dados", "Excel"],
-    featured: false,
+    presentation: "showcase",
     disclaimer:
       "Os dashboards exibidos representam projetos pessoais e estudos de Business Intelligence. Não são utilizados dados confidenciais ou informações corporativas.",
     gallery: [
@@ -117,7 +130,7 @@ export const projects = [
       "Desenvolvimento de análises para apoio à tomada de decisão",
     ],
     technologies: ["Power BI", "SQL", "ETL", "Excel Avançado", "Modelagem de Dados"],
-    featured: false,
+    presentation: "showcase",
     badge: "Projeto / Participação",
     gallery: [
       {
@@ -138,6 +151,77 @@ export const projects = [
     ],
   },
   {
+    title: "Portal CT-e — Gestão de Documentos e Informações Logísticas",
+    badge: "Projeto corporativo",
+    description:
+      "Plataforma web desenvolvida para centralizar documentos fiscais e informações operacionais, facilitando o compartilhamento de arquivos e o acompanhamento de dados entre a transportadora e seus fornecedores.",
+    highlights: [
+      "Envio, visualização e download de documentos PDF e XML.",
+      "Registro e atualização de DT, PC, CF e FR.",
+      "Consulta e organização de documentos fiscais.",
+      "Busca por fornecedor e número da nota fiscal.",
+      "Acompanhamento do preenchimento das informações.",
+    ],
+    technologies: ["React", "TypeScript", "Vite", "Node.js", "Express", "Supabase"],
+    presentation: "card",
+    gallery: [
+      {
+        label: "Login",
+        src: "/portal-cte/01-login.png",
+        alt: "Tela de login do Portal CT-e",
+      },
+      {
+        label: "Documentos",
+        src: "/portal-cte/02-documentos.png",
+        alt: "Lista de documentos do Portal CT-e com busca e filtro por situação",
+      },
+      {
+        label: "Problemas de ICMS",
+        src: "/portal-cte/03-problemas-icms.png",
+        alt: "Painel do Portal CT-e para acompanhar divergências de ICMS",
+      },
+    ],
+  },
+  {
+    title: "FMS Connect — Plataforma de Gestão de Fretes",
+    badge: "Projeto independente",
+    description:
+      "Plataforma web desenvolvida para centralizar a gestão de fretes, clientes, motoristas, veículos, documentos e indicadores operacionais de transportadoras.",
+    highlights: [
+      "Cadastro e gerenciamento de fretes.",
+      "Gestão de clientes, motoristas e veículos.",
+      "Controle de custos e despesas de transporte.",
+      "Acompanhamento de entregas, status e ocorrências.",
+      "Armazenamento e consulta de documentos.",
+      "Dashboard com indicadores financeiros e operacionais.",
+      "Autenticação e controle de acesso.",
+    ],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase", "Vite", "React Router"],
+    presentation: "card",
+    gallery: [
+      {
+        label: "Login",
+        src: "/fms-connect/01-login.png",
+        alt: "Tela de login do FMS Connect",
+      },
+      {
+        label: "Dashboard",
+        src: "/fms-connect/02-dashboard.png",
+        alt: "Dashboard do FMS Connect com indicadores operacionais e financeiros",
+      },
+      {
+        label: "Fretes",
+        src: "/fms-connect/03-fretes.png",
+        alt: "Lista de fretes do FMS Connect com filtros por status e cliente",
+      },
+      {
+        label: "Cadastros",
+        src: "/fms-connect/04-cadastros.png",
+        alt: "Tela de cadastros do FMS Connect com abas de clientes, motoristas e veículos",
+      },
+    ],
+  },
+  {
     title: "Automação de Processos e SAP",
     description:
       "Desenvolvimento de automações para redução de atividades manuais, integração de informações e otimização de fluxos operacionais.",
@@ -149,7 +233,7 @@ export const projects = [
       "Integração de Sistemas",
     ],
     technologies: ["Python", "SAP", "SQL", "RPA", "Automação"],
-    featured: false,
+    presentation: "card",
   },
 ] as const;
 
@@ -162,7 +246,7 @@ export const expertiseAreas = [
   {
     title: "Desenvolvimento de Sistemas",
     description:
-      "Aplicações web modernas com arquitetura escalável e foco em UX.",
+      "Desenvolvimento de aplicações web para apoiar rotinas de trabalho.",
   },
   {
     title: "Automação de Processos",
@@ -197,7 +281,7 @@ export const experience = {
         "Desenvolvimento de relatórios e dashboards em Power BI para acompanhamento de indicadores e apoio à tomada de decisão.",
         "Automatização de processos de coleta, atualização e tratamento de dados, reduzindo atividades manuais.",
         "Responsável pelo desenvolvimento do HeroTrack, plataforma web para rastreamento de cargas em tempo real, ampliando a visibilidade das operações logísticas.",
-        "Desenvolvimento e evolução contínua da plataforma, com foco em integração de dados, usabilidade e novas funcionalidades.",
+        "Desenvolvimento do Portal CT-e, plataforma web para centralizar documentos fiscais e informações operacionais, facilitando a comunicação com fornecedores.",
       ],
     },
     {

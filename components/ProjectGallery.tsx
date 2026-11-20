@@ -29,7 +29,7 @@ type GalleryImageProps = {
   className?: string;
   fill?: boolean;
   sizes?: string;
-  priority?: boolean;
+  preload?: boolean;
   width?: number;
   height?: number;
 };
@@ -40,7 +40,7 @@ function GalleryImage({
   className = "",
   fill,
   sizes,
-  priority,
+  preload,
   width,
   height,
 }: GalleryImageProps) {
@@ -61,22 +61,22 @@ function GalleryImage({
     );
   }
 
-  const imageProps: ComponentProps<typeof Image> = {
+  const imageProps: Omit<ComponentProps<typeof Image>, "alt"> = {
     src,
-    alt,
     className,
     sizes,
-    priority,
+    preload,
     onError: () => setFailed(true),
   };
 
   if (fill) {
-    return <Image {...imageProps} fill />;
+    return <Image {...imageProps} alt={alt} fill />;
   }
 
   return (
     <Image
       {...imageProps}
+      alt={alt}
       width={width ?? 1920}
       height={height ?? 1080}
     />
@@ -112,14 +112,9 @@ export function ProjectGallery({
 }: ProjectGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const styles = variantStyles[variant];
 
   const active = items[activeIndex];
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const goTo = useCallback(
     (index: number) => {
@@ -216,7 +211,7 @@ export function ProjectGallery({
               height={1080}
               className="max-h-[70vh] w-auto max-w-full object-contain sm:max-h-[75vh]"
               sizes="100vw"
-              priority
+              preload
             />
           </div>
           <p
@@ -256,7 +251,7 @@ export function ProjectGallery({
                   fill
                   className={`${styles.imageFit} transition duration-500 group-hover:scale-[1.015]`}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1152px"
-                  priority={index === 0}
+                  preload={index === 0}
                 />
               </div>
             ))}
@@ -359,7 +354,7 @@ export function ProjectGallery({
         ) : null}
       </div>
 
-      {mounted && lightbox ? createPortal(lightbox, document.body) : null}
+      {lightbox ? createPortal(lightbox, document.body) : null}
     </>
   );
 }

@@ -18,7 +18,7 @@ export function ExpertiseAreas() {
         <SectionHeader
           eyebrow="Expertise"
           title="Principais Áreas de Atuação"
-          description="Competências multidisciplinares aplicadas em projetos corporativos de alto impacto."
+          description="Áreas em que trabalho e conhecimentos que venho desenvolvendo."
         />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

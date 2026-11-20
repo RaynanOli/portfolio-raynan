@@ -2,9 +2,16 @@ import { projects } from "@/lib/data";
 import { AthosDigitalShowcase } from "@/components/AthosDigitalShowcase";
 import { BIGalleryShowcase } from "@/components/BIGalleryShowcase";
 import { HerotrackShowcase } from "@/components/HerotrackShowcase";
+import { ProjectGallery, type GalleryItem } from "@/components/ProjectGallery";
 import { SectionHeader } from "@/components/SectionHeader";
 
-type Project = (typeof projects)[number];
+type SecondaryProject = Pick<
+  (typeof projects)[number],
+  "title" | "description" | "highlights" | "technologies"
+> & {
+  badge?: string;
+  gallery?: readonly GalleryItem[];
+};
 
 function TechnologyTags({ items }: { items: readonly string[] }) {
   return (
@@ -21,9 +28,14 @@ function TechnologyTags({ items }: { items: readonly string[] }) {
   );
 }
 
-function SecondaryProjectCard({ project }: { project: Project }) {
+function SecondaryProjectCard({ project }: { project: SecondaryProject }) {
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface p-5 backdrop-blur-sm transition hover:border-border hover:bg-surface-hover sm:p-6 lg:p-8">
+      {project.badge ? (
+        <p className="mb-4 w-fit rounded-full border border-violet-border bg-violet-soft px-3 py-1 text-xs font-semibold uppercase tracking-wider text-violet-text">
+          {project.badge}
+        </p>
+      ) : null}
       <h3 className="text-xl font-semibold tracking-tight text-heading sm:text-2xl">
         {project.title}
       </h3>
@@ -31,6 +43,12 @@ function SecondaryProjectCard({ project }: { project: Project }) {
       <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
         {project.description}
       </p>
+
+      {project.gallery?.length ? (
+        <div className="mt-6">
+          <ProjectGallery items={project.gallery} />
+        </div>
+      ) : null}
 
       <div className="mt-6">
         <p className="mb-3 text-xs font-medium uppercase tracking-[0.15em] text-muted">
@@ -58,7 +76,7 @@ function SecondaryProjectCard({ project }: { project: Project }) {
 
 export function Projects() {
   const cardProjects = projects.filter(
-    (project) => !project.featured && !("gallery" in project),
+    (project) => project.presentation === "card",
   );
 
   return (
@@ -66,20 +84,21 @@ export function Projects() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Projetos"
-          title="Soluções que geram impacto"
-          description="Projetos que unem engenharia de software, dados, automação e soluções corporativas."
+          title="Sistemas, dashboards e automações"
+          description="Projetos em logística, Business Intelligence e automação de rotinas."
         />
 
         <div className="space-y-6">
           <HerotrackShowcase />
-          <BIGalleryShowcase />
-          <AthosDigitalShowcase />
 
           <div className="grid gap-6">
             {cardProjects.map((project) => (
               <SecondaryProjectCard key={project.title} project={project} />
             ))}
           </div>
+
+          <BIGalleryShowcase />
+          <AthosDigitalShowcase />
         </div>
       </div>
     </section>
