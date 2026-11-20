@@ -3,8 +3,8 @@ export const site = {
   headline:
     "Assistente de Dados Júnior | BI, Automação e Desenvolvimento de Sistemas",
   about: [
-    "Sou Assistente de Dados Júnior. No dia a dia, integro e trato dados, uso SQL, crio dashboards em Power BI e desenvolvo automações em Python e aplicações para a rotina operacional.",
-    "Estudo Engenharia de Software e tenho conhecimentos em modelagem de dados, desenvolvimento web e tecnologias Microsoft.",
+    "Sou Assistente de Dados Júnior na Transportes Aparecida e curso Engenharia de Software. Crio painéis no Power BI para ajudar a equipe a acompanhar a operação logística e automatizo tarefas que antes eram feitas à mão.",
+    "Um dos sistemas que desenvolvi é o Portal CT-e. Ele reúne documentos fiscais em um só lugar e facilita a troca de arquivos com fornecedores.",
   ],
   careerGoal:
     "Quero desenvolver sistemas que simplifiquem tarefas e ajudem as equipes a tomar decisões com base em dados. Também quero aprofundar meus conhecimentos em inteligência artificial aplicada.",
