@@ -165,6 +165,23 @@ export const projects = [
     ],
     technologies: ["React", "TypeScript", "Vite", "Node.js", "Express", "Supabase"],
     presentation: "card",
+    gallery: [
+      {
+        label: "Login",
+        src: "/portal-cte/01-login.png",
+        alt: "Tela de login do Portal CT-e",
+      },
+      {
+        label: "Documentos",
+        src: "/portal-cte/02-documentos.png",
+        alt: "Lista de documentos do Portal CT-e com busca e filtro por situação",
+      },
+      {
+        label: "Problemas de ICMS",
+        src: "/portal-cte/03-problemas-icms.png",
+        alt: "Painel do Portal CT-e para acompanhar divergências de ICMS",
+      },
+    ],
   },
   {
     title: "FMS Connect — Plataforma de Gestão de Fretes",
@@ -182,6 +199,28 @@ export const projects = [
     ],
     technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase", "Vite", "React Router"],
     presentation: "card",
+    gallery: [
+      {
+        label: "Login",
+        src: "/fms-connect/01-login.png",
+        alt: "Tela de login do FMS Connect",
+      },
+      {
+        label: "Dashboard",
+        src: "/fms-connect/02-dashboard.png",
+        alt: "Dashboard do FMS Connect com indicadores operacionais e financeiros",
+      },
+      {
+        label: "Fretes",
+        src: "/fms-connect/03-fretes.png",
+        alt: "Lista de fretes do FMS Connect com filtros por status e cliente",
+      },
+      {
+        label: "Cadastros",
+        src: "/fms-connect/04-cadastros.png",
+        alt: "Tela de cadastros do FMS Connect com abas de clientes, motoristas e veículos",
+      },
+    ],
   },
 ] as const;
 
