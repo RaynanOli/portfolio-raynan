@@ -90,14 +90,15 @@ export function Projects() {
 
         <div className="space-y-6">
           <HerotrackShowcase />
-          <BIGalleryShowcase />
-          <AthosDigitalShowcase />
 
           <div className="grid gap-6">
             {cardProjects.map((project) => (
               <SecondaryProjectCard key={project.title} project={project} />
             ))}
           </div>
+
+          <BIGalleryShowcase />
+          <AthosDigitalShowcase />
         </div>
       </div>
     </section>

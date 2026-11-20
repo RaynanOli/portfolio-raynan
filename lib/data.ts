@@ -138,20 +138,6 @@ export const projects = [
     ],
   },
   {
-    title: "Automação de Processos e SAP",
-    description:
-      "Desenvolvimento de automações para redução de atividades manuais, integração de informações e otimização de fluxos operacionais.",
-    highlights: [
-      "RPA",
-      "Automação SAP",
-      "Atualização Automática de Dados",
-      "Otimização Operacional",
-      "Integração de Sistemas",
-    ],
-    technologies: ["Python", "SAP", "SQL", "RPA", "Automação"],
-    presentation: "card",
-  },
-  {
     title: "Portal CT-e — Gestão de Documentos e Informações Logísticas",
     badge: "Projeto corporativo",
     description:
@@ -221,6 +207,20 @@ export const projects = [
         alt: "Tela de cadastros do FMS Connect com abas de clientes, motoristas e veículos",
       },
     ],
+  },
+  {
+    title: "Automação de Processos e SAP",
+    description:
+      "Desenvolvimento de automações para redução de atividades manuais, integração de informações e otimização de fluxos operacionais.",
+    highlights: [
+      "RPA",
+      "Automação SAP",
+      "Atualização Automática de Dados",
+      "Otimização Operacional",
+      "Integração de Sistemas",
+    ],
+    technologies: ["Python", "SAP", "SQL", "RPA", "Automação"],
+    presentation: "card",
   },
 ] as const;
 
