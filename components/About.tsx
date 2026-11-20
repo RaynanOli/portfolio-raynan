@@ -8,8 +8,8 @@ export function About() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Sobre Mim"
-          title="Engenharia de software com visão de negócio"
-          description="Combino desenvolvimento, dados e automação para entregar soluções corporativas de alto impacto."
+          title="Desenvolvimento, dados e automação"
+          description="Trabalho com desenvolvimento de sistemas, análise de dados e automação de processos, buscando criar soluções que facilitem as atividades do dia a dia."
         />
 
         <div className="grid gap-6 lg:grid-cols-2">

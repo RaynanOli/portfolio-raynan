@@ -4,9 +4,8 @@ import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
-  useState,
+  useSyncExternalStore,
   type ReactNode,
 } from "react";
 import {
@@ -24,41 +23,38 @@ type ThemeContextValue = {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-function readTheme(): Theme {
-  const stored = localStorage.getItem(THEME_STORAGE_KEY);
-  const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-  return resolveTheme(stored, prefersLight);
+function getThemeSnapshot(): Theme {
+  return resolveTheme(
+    document.documentElement.getAttribute("data-theme"),
+    false,
+  );
 }
 
-function applyTheme(theme: Theme, animate = false) {
-  document.documentElement.setAttribute("data-theme", theme);
+function getServerTheme(): Theme {
+  return "dark";
+}
 
-  if (animate) {
-    document.documentElement.classList.add("theme-transition");
-    window.setTimeout(() => {
-      document.documentElement.classList.remove("theme-transition");
-    }, 350);
-  }
+function subscribeToTheme(onChange: () => void) {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, { attributeFilter: ["data-theme"] });
+  return () => observer.disconnect();
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
-
-  useEffect(() => {
-    const current =
-      (document.documentElement.getAttribute("data-theme") as Theme | null) ??
-      readTheme();
-    setTheme(current);
-    applyTheme(current);
-  }, []);
+  const theme = useSyncExternalStore(
+    subscribeToTheme,
+    getThemeSnapshot,
+    getServerTheme,
+  );
 
   const toggleTheme = useCallback(() => {
-    setTheme((current) => {
-      const next: Theme = current === "dark" ? "light" : "dark";
-      localStorage.setItem(THEME_STORAGE_KEY, next);
-      applyTheme(next, true);
-      return next;
-    });
+    const next = getThemeSnapshot() === "dark" ? "light" : "dark";
+    localStorage.setItem(THEME_STORAGE_KEY, next);
+
+    const root = document.documentElement;
+    root.setAttribute("data-theme", next);
+    root.classList.add("theme-transition");
+    window.setTimeout(() => root.classList.remove("theme-transition"), 350);
   }, []);
 
   const value = useMemo(
