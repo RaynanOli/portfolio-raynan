@@ -16,8 +16,12 @@ export function About() {
           <div className="rounded-2xl border border-border bg-surface p-6 backdrop-blur-sm sm:p-8">
             <h3 className="mb-4 text-lg font-semibold text-heading">Quem sou</h3>
             <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
-              {site.about.map((paragraph) => (
-                <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+              {site.about.map(([before, emphasis, after]) => (
+                <p key={before}>
+                  {before}
+                  {emphasis ? <strong>{emphasis}</strong> : null}
+                  {after}
+                </p>
               ))}
             </div>
           </div>

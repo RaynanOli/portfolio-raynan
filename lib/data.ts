@@ -3,7 +3,19 @@ export const site = {
   headline:
     "Assistente de Dados Júnior | BI, Automação e Desenvolvimento de Sistemas",
   about: [
-    "Estudante de Engenharia de Software com experiência em análise de dados, Business Intelligence, automação de processos e desenvolvimento de soluções digitais. Atuo com integração e tratamento de dados, criação de dashboards em Power BI, automações em Python e desenvolvimento de aplicações voltadas para otimização de processos.",
+    [
+      "Sou estudante de Engenharia de Software e atuo como Assistente de Dados Júnior, com experiência em análise de dados, automação de processos e desenvolvimento de soluções tecnológicas.",
+    ],
+    [
+      "No meu dia a dia, trabalho com ",
+      "SQL, Power BI, Python, Excel e SAP",
+      ", buscando otimizar processos, organizar informações e transformar dados em soluções que facilitem a rotina das empresas.",
+    ],
+    [
+      "Também desenvolvo aplicações web utilizando tecnologias como ",
+      "React, TypeScript e Supabase",
+      ". Entre meus projetos estão plataformas voltadas à gestão logística, controle de documentos e acompanhamento de indicadores operacionais.",
+    ],
   ],
   careerGoal:
     "Quero desenvolver sistemas que simplifiquem tarefas e ajudem as equipes a tomar decisões com base em dados. Também quero aprofundar meus conhecimentos em inteligência artificial aplicada.",
